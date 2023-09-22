@@ -1,0 +1,22 @@
+# More about this file: https://docs.gradle.org/current/userguide/platforms.html#sub::toml-dependencies-format
+
+[versions]
+kotlin = "1.9.10"
+
+antd = "5.9.2"
+
+[libraries]
+kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlin-wrappers-bom = "org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:1.0.0-pre.604"
+kotlinw-emotion = { module = "org.jetbrains.kotlin-wrappers:kotlin-emotion" }  # React Emotion (CSS), 11.11.1
+kotlinw-react = { module = "org.jetbrains.kotlin-wrappers:kotlin-react", version = "18.2.0-pre.604" }  # React, 18.2.0
+kotlinw-react-dom = { module = "org.jetbrains.kotlin-wrappers:kotlin-react-dom", version = "18.2.0-pre.604" }  # React DOM, 18.2.0
+
+[bundles]
+
+[plugins]
+buildconfig = { id = "com.github.gmazzo.buildconfig", version = "4.1.2" }  # Generates BuildConfig object (https://github.com/gmazzo/gradle-buildconfig-plugin)
+gradle-versions = { id = "com.github.ben-manes.versions", version = "0.48.0" }  # Search for dependency updates (https://github.com/ben-manes/gradle-versions-plugin)
+grgit = { id = "org.ajoberstar.grgit", version = "5.2.0" }  # Manipulate with project's git repo (https://github.com/ajoberstar/grgit)
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }  # Adds support for Kotlin/JS

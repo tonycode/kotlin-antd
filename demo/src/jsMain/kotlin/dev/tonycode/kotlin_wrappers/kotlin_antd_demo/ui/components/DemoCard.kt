@@ -1,14 +1,16 @@
 package dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components
 
+import antd.Typography
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.Colors
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.Dimens
 import emotion.react.css
 import react.FC
 import react.Props
 import react.ReactNode
+import react.dom.html.ReactHTML.code
 import react.dom.html.ReactHTML.div
-import react.dom.html.ReactHTML.h3
 import web.cssom.px
+import web.cssom.times
 
 
 external interface DemoCardProps : Props {
@@ -34,20 +36,25 @@ val DemoCard = FC<DemoCardProps> { props ->
                 borderRadius = Dimens.cardCornerRadius
                 backgroundColor = Colors.cardBackground
                 padding = Dimens.cardMargin
+                paddingBottom = (1.5 * Dimens.cardMargin)
             }
 
             // title
-            h3 {
+            Typography.Title {
                 css {
-                    marginTop = 0.px
-                    marginBottom = Dimens.cardMargin
+                    code { margin = 0.px /* clear left & right margins just for title usage */ }
                 }
+                level = 4
+                code = true
 
                 +props.title
             }
 
             // showcase
-            child(props.showcase)
+            div {
+                css { marginTop = (1.5 * Dimens.cardMargin) }
+                child(props.showcase)
+            }
         }
 
         // controls

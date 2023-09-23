@@ -1,5 +1,6 @@
 package dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui
 
+import antd.Typography
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.BuildInfoView
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.DemoScreen
 import emotion.react.Global
@@ -10,9 +11,11 @@ import react.Fragment
 import react.Props
 import react.dom.html.ReactHTML.body
 import react.dom.html.ReactHTML.div
-import react.dom.html.ReactHTML.h2
+import web.cssom.BoxSizing
 import web.cssom.Position
+import web.cssom.Selector
 import web.cssom.div
+import web.cssom.number
 import web.cssom.pct
 import web.cssom.plus
 import web.cssom.px
@@ -23,21 +26,29 @@ val App = FC<Props> {
 
     Global {
         styles {
-            body {
+            "*" {
                 margin = 0.px
+            }
+            "*, *::before, *::after" {
+                boxSizing = BoxSizing.borderBox
+            }
+            body {
                 backgroundColor = Colors.screenBackground
+                lineHeight = number(1.5)
+                set(Selector("-webkit-font-smoothing"), "antialiased")
             }
         }
     }
 
     Fragment {
         // header
-        h2 {
+        Typography.Title {
             css {
                 marginTop = (1.5 * Dimens.screenMargin)
                 marginLeft = (Dimens.screenMargin + Dimens.cardMargin/2)
                 marginRight = (Dimens.screenMargin + Dimens.cardMargin/2)
             }
+            level = 3
 
             +"kotlin-antd - Demos"
         }

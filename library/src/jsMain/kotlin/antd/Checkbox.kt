@@ -10,7 +10,7 @@ import web.html.HTMLInputElement
 
 
 @JsName("Checkbox")
-external val Checkbox : ComponentClass<CheckboxProps>
+external val Checkbox: ComponentClass<CheckboxProps>
 
 external interface CheckboxProps : Props {
 

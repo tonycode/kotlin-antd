@@ -10,7 +10,7 @@ import web.uievents.MouseEvent
 
 
 @JsName("Button")
-external val Button : ComponentClass<ButtonProps>
+external val Button: ComponentClass<ButtonProps>
 
 external interface ButtonProps : Props {
 

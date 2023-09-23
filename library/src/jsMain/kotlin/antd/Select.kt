@@ -8,7 +8,7 @@ import react.Props
 
 
 @JsName("Select")
-external val Select : ComponentClass<SelectProps>
+external val Select: ComponentClass<SelectProps>
 
 external interface SelectProps : Props {
 

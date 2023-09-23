@@ -9,7 +9,7 @@ import react.ReactNode
 
 
 @JsName("Space")
-external val Space : ComponentClass<SpaceProps>
+external val Space: ComponentClass<SpaceProps>
 
 external interface SpaceProps : Props {
 

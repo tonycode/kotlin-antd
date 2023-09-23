@@ -19,11 +19,14 @@ external interface DemoCardProps : Props {
 
     var showcase: ReactNode
 
-    var controls: ReactNode
+    var controls: ReactNode?
 
 }
 
 val DemoCard = FC<DemoCardProps> { props ->
+
+    val controls = props.controls
+
 
     div {
         css {
@@ -36,7 +39,7 @@ val DemoCard = FC<DemoCardProps> { props ->
                 borderRadius = Dimens.cardCornerRadius
                 backgroundColor = Colors.cardBackground
                 padding = Dimens.cardMargin
-                paddingBottom = (1.5 * Dimens.cardMargin)
+                if (controls != null) paddingBottom = (1.5 * Dimens.cardMargin)
             }
 
             // title
@@ -58,9 +61,11 @@ val DemoCard = FC<DemoCardProps> { props ->
         }
 
         // controls
-        div {
-            css { padding = Dimens.cardMargin }
-            child(props.controls)
+        if (controls != null) {
+            div {
+                css { padding = Dimens.cardMargin }
+                child(controls)
+            }
         }
     }
 

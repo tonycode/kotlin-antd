@@ -57,6 +57,7 @@ val App = FC<Props> {
         div {
             css {
                 marginTop = (1.5 * Dimens.screenMargin)
+                marginBottom = 56.px
                 paddingLeft = Dimens.screenMargin
                 paddingRight = Dimens.screenMargin
             }

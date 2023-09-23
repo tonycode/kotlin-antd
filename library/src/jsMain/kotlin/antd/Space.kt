@@ -4,14 +4,14 @@
 package antd
 
 import react.ComponentClass
-import react.Props
+import react.PropsWithClassName
 import react.ReactNode
 
 
 @JsName("Space")
 external val Space: ComponentClass<SpaceProps>
 
-external interface SpaceProps : Props {
+external interface SpaceProps : PropsWithClassName {
 
     /**
      * Align items

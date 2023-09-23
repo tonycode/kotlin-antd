@@ -17,7 +17,7 @@ external interface ButtonProps : Props {
     /**
      * Option to fit button width to its parent width
      *
-     * default: false
+     * @default false
      */
     var block: Boolean
 
@@ -26,28 +26,28 @@ external interface ButtonProps : Props {
     /**
      * Set the danger status of button
      *
-     * default: false
+     * @default false
      */
     var danger: Boolean
 
     /**
      * Disabled state of button
      *
-     * default: false
+     * @default false
      */
     var disabled: Boolean
 
     /**
      * Make background transparent and invert text and border colors
      *
-     * default: false
+     * @default false
      */
     var ghost: Boolean
 
     /**
      * Redirect url of link button
      *
-     * default: null
+     * @default null
      */
     var href: String?
 
@@ -56,21 +56,21 @@ external interface ButtonProps : Props {
      *
      * see: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type
      *
-     * default: [ButtonHtmlType.button]
+     * @default [ButtonHtmlType.button]
      */
     var htmlType: ButtonHtmlType
 
     /**
      * Set the icon component of button
      *
-     * default: null
+     * @default null
      */
     var icon: ReactNode?
 
     /**
      * Set the loading status of button
      *
-     * default: false
+     * @default false
      */
     var loading: Boolean
     //todo { delay: number }
@@ -78,14 +78,14 @@ external interface ButtonProps : Props {
     /**
      * Can be set button shape
      *
-     * default: [ButtonShape.default]
+     * @default [ButtonShape.default]
      */
     var shape: ButtonShape
 
     /**
      * Set the size of button
      *
-     * default: [Size.middle]
+     * @default [Size.middle]
      */
     var size: Size
 
@@ -94,21 +94,21 @@ external interface ButtonProps : Props {
     /**
      * Same as target attribute of a, works when href is specified
      *
-     * default: null
+     * @default null
      */
     var target: String?
 
     /**
      * Set button type
      *
-     * default: [ButtonType.default]
+     * @default [ButtonType.default]
      */
     var type: ButtonType
 
     /**
      * Set the handler to handle `click` event
      *
-     * default: null
+     * @default null
      */
     var onClick: ((event: MouseEvent) -> Unit)?
 

@@ -16,21 +16,21 @@ external interface SpaceProps : Props {
     /**
      * Align items
      *
-     * default: null
+     * @default null
      */
     var align: Align?
 
     /**
      * The space direction
      *
-     * default: [Direction.horizontal]
+     * @default [Direction.horizontal]
      */
     var direction: Direction
 
     /**
      * The space size
      *
-     * default: [Size.small]
+     * @default [Size.small]
      */
     var size: Size
     //todo Size[]
@@ -38,14 +38,14 @@ external interface SpaceProps : Props {
     /**
      * Set split
      *
-     * default: null
+     * @default null
      */
     var split: ReactNode?
 
     /**
      * Auto wrap line, when `horizontal` effective
      *
-     * default: false
+     * @default false
      */
     var wrap: Boolean
 

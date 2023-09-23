@@ -17,42 +17,42 @@ external interface CheckboxProps : Props {
     /**
      * If get focus when component mounted
      *
-     * default: false
+     * @default false
      */
     var autoFocus: Boolean
 
     /**
      * Specifies whether the checkbox is selected
      *
-     * default: false
+     * @default false
      */
     var checked: Boolean
 
     /**
      * Specifies the initial state: whether or not the checkbox is selected
      *
-     * default: false
+     * @default false
      */
     var defaultChecked: Boolean
 
     /**
      * If disable checkbox
      *
-     * default: false
+     * @default false
      */
     var disabled: Boolean
 
     /**
      * The indeterminate checked state of checkbox
      *
-     * default: false
+     * @default false
      */
     var indeterminate: Boolean
 
     /**
      * The callback function that is triggered when the state changes
      *
-     * default: null
+     * @default null
      */
     //todo ((e: CheckboxChangeEvent) -> Unit)
     var onChange: ChangeEventHandler<HTMLInputElement>?

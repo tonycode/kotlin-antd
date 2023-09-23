@@ -10,6 +10,7 @@ import antd.SizeFactory
 import antd.Space
 import react.FC
 import react.Fragment
+import react.dom.html.ReactHTML.p
 
 
 external interface ButtonDemoControlsProps : ButtonDemoProps {
@@ -79,13 +80,14 @@ val ButtonDemoControls = FC<ButtonDemoControlsProps> { props ->
             }
 
             // shape
+            p { +"shape:" }
             Select {
-                defaultValue = props.buttonsShape.toString()
                 options = arrayOf(
                     Option(ButtonShape.default.toString()),
                     Option(ButtonShape.circle.toString()),
                     Option(ButtonShape.round.toString()),
                 )
+                defaultValue = props.buttonsShape.toString()
 
                 onChange = { value ->
                     props.onButtonsShapeChanged(ButtonShapeFactory.ofValue(value))
@@ -93,13 +95,14 @@ val ButtonDemoControls = FC<ButtonDemoControlsProps> { props ->
             }
 
             // size
+            p { +"size:" }
             Select {
-                defaultValue = props.buttonsSize.toString()
                 options = arrayOf(
                     Option(Size.small.toString()),
                     Option(Size.middle.toString()),
                     Option(Size.large.toString()),
                 )
+                defaultValue = props.buttonsSize.toString()
 
                 onChange = { value ->
                     props.onButtonsSizeChanged(SizeFactory.ofValue(value))

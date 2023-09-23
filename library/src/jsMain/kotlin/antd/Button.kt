@@ -106,7 +106,7 @@ external interface ButtonProps : Props {
     var type: ButtonType
 
     /**
-     * Set the handler to handle <code>click</code> event
+     * Set the handler to handle `click` event
      *
      * default: null
      */

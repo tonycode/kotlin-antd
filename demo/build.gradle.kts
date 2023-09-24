@@ -18,7 +18,7 @@ val projectPackage = "$projectGroup.$projectArtifact"
 val projectName = projectArtifact
 val projectVersion = "0.1.0-SNAPSHOT"
 val buildNumber = "0"
-val isProduction: Boolean = (properties["prod"] == "true")
+val isProduction: Boolean = (properties["prod"] == "true")  // turn off debugging stuff (sourcemaps/logging/..) for prod
 
 group = projectGroup
 version = projectVersion

@@ -14,6 +14,7 @@ val projectArtifact = "kotlin-antd"
 val projectPackage = "$projectGroup.$projectArtifact"
 val projectVersion = "0.1.0-SNAPSHOT"
 val buildNumber = "0"
+val isRelease = false  // release library build (for Maven Central publication)
 
 group = projectGroup
 version = projectVersion
@@ -47,7 +48,30 @@ val moduleDefinition = if (findProperty("modular") == "true") "commonjs" else "u
 
 
 //region publication
-configure<PublishingExtension> {
+val ossrhUsername: String? by project
+val ossrhPassword: String? by project
+
+tasks.withType<Sign>().configureEach {
+    onlyIf { isRelease }
+}
+
+publishing {
+    repositories {
+        maven {
+            val snapshotRepositoryUrl: String by project
+            val releaseRepositoryUrl: String by project
+            val repositoryUrl = if (isRelease) releaseRepositoryUrl else snapshotRepositoryUrl
+
+            url = uri(repositoryUrl)
+
+            credentials {
+                username = ossrhUsername.orEmpty()
+                password = ossrhPassword.orEmpty()
+            }
+        }
+        mavenLocal()  // for debugging purposes
+    }
+
     publications {
         withType<MavenPublication>().configureEach {
             groupId = projectGroup
@@ -56,10 +80,6 @@ configure<PublishingExtension> {
 
             configurePom()
         }
-    }
-
-    repositories {
-        mavenLocal()
     }
 }
 

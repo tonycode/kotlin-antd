@@ -21,8 +21,18 @@ version = projectVersion
 
 kotlin {
     js {
-        moduleName = project.name
+        moduleName = projectArtifact  // used for: package.json
         browser()
+
+        compilations {
+            val main by getting
+            main.apply {
+                kotlinOptions {
+                    // used for: klib/manifest/unique_name
+                    freeCompilerArgs += "-Xir-module-name=$projectGroup:$projectArtifact"
+                }
+            }
+        }
     }
 
     sourceSets {
@@ -39,8 +49,9 @@ kotlin {
 
 tasks.withType<KotlinJsCompile>().configureEach {
     kotlinOptions {
-        sourceMap = false
+        moduleName = projectArtifact
         moduleKind = moduleDefinition
+        sourceMap = false
     }
 }
 

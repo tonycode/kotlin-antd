@@ -44,7 +44,7 @@ buildConfig {
 
 kotlin {
     js {
-        moduleName = project.name
+        moduleName = projectArtifact
         browser {
             commonWebpackConfig(Action {
                 outputFileName = "$projectArtifact.js"
@@ -79,8 +79,9 @@ kotlin {
 
 tasks.withType<KotlinJsCompile>().configureEach {
     kotlinOptions {
-        sourceMap = !isProduction
+        moduleName = projectArtifact
         moduleKind = moduleDefinition
+        sourceMap = !isProduction
     }
 }
 

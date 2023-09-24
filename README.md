@@ -53,7 +53,7 @@ Space {
         disabled = false
         ghost = false
         loading = false
-        shape = false
+        shape = ButtonShape.round
         size = Size.large
 
         +"default"
@@ -63,8 +63,10 @@ Space {
         setOptions("Apple", "Pear", "Orange")
         value = "Apple"
 
-        size = Size.large
         disabled = false
+        optionType = RadioOptionType.button
+        buttonStyle = RadioButtonStyle.outline
+        size = Size.large
 
         onChange = { console.dir(it) }
     }
@@ -80,7 +82,11 @@ Space {
     }
 
     Select {
-        options = arrayOf("Item 1", "Item 2", "Item 3")
+        options = arrayOf(
+            Option("Item 1"),
+            Option("Item 2"),
+            Option("Item 3")
+        )
         defaultValue = "Item 1"
 
         onChange = { console.log(it) }

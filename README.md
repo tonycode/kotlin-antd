@@ -7,6 +7,8 @@ Kotlin wrapper for **Ant Design** (React UI library `antd`, https://ant.design/d
 
 **LIVE DEMO**: https://tonycode.dev/demos/kotlin-antd-demo/
 
+(this is deployed `demo` module from this repository)
+
 <hr />
 
 <img src="docs/kotlin-antd-promo.png" alt="preview" title="preview" />
@@ -102,16 +104,21 @@ see usage examples here:
 - [Typography.Text](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_antd_demo/ui/screens/typography/TypographyTextDemo.kt)
 
 
-## Components implemented
+## Wrappers implemented
 
-- `Button`
-- `Checkbox`
-- `Radio.Group`
-- `Radio.Button`
-- `Select`
-- `Space`
-- `Typography.Title`
-- `Typography.Text`
+- General
+    - `Button`
+    - `Typography.Title`
+    - `Typography.Text`
+- Layout
+    - `Space`
+- Data Entry
+    - `Checkbox`
+    - `Radio.Button`
+    - `Radio.Group`
+    - `Select`
+
+Full list of `antd` js-library Components: https://ant.design/components/overview
 
 
 ## License

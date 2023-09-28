@@ -3,7 +3,9 @@ package dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens
 import antd.Direction
 import antd.Size
 import antd.Space
+import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.Section
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.button.ButtonDemoCard
+import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.icon.IconDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.radio.RadioDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.spin.SpinDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.typography.TypographyTextDemoCard
@@ -21,16 +23,17 @@ val DemoScreen = FC<Props> {
         direction = Direction.vertical
         size = Size.large
 
+        Section { title = "General" }
         ButtonDemoCard()
-
+        IconDemoCard()
         TypographyTitleDemoCard()
-
         TypographyTextDemoCard()
 
+        Section { title = "Data Entry" }
         RadioDemoCard()
 
+        Section { title = "Feedback" }
         SpinDemoCard()
-
     }
 
 }

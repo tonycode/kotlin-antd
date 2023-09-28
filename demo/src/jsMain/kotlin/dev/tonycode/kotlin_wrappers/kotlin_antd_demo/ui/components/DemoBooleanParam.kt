@@ -1,6 +1,7 @@
 package dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components
 
-import antd.Checkbox
+import antd.Switch
+import antd.SwitchSize
 import react.FC
 import react.Props
 import react.create
@@ -21,13 +22,12 @@ val DemoBooleanParam = FC<DemoBooleanParamProps> { props ->
     DemoParam {
         name = props.name
 
-        changer = Checkbox.create {
+        changer = Switch.create {
+            size = SwitchSize.small
             checked = props.value
 
-            +(if (props.value) "true" else "false")
-
-            onChange = {
-                props.onValueChanged(it.target.checked)
+            onChange = { checked, _ ->
+                props.onValueChanged(checked)
             }
         }
     }

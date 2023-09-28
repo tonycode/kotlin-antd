@@ -118,6 +118,7 @@ see usage examples here:
     - `Radio.Button` (95%)
     - `Radio.Group` (95%)
     - `Select` (10%)
+    - `Switch` (50%)
 - Data Display
     - `Tabs` (10%)
 - Feedback

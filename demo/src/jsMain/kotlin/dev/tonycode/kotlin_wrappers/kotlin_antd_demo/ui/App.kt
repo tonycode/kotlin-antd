@@ -35,7 +35,7 @@ val App = FC<Props> {
             body {
                 backgroundColor = Colors.screenBackground
                 lineHeight = number(1.5)
-                set(Selector("-webkit-font-smoothing"), "antialiased")
+                set(Selector("WebkitFontSmoothing"), "antialiased")
             }
         }
     }

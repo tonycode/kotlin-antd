@@ -4,10 +4,12 @@ import antd.ButtonShape
 import antd.ButtonShapeFactory
 import antd.Direction
 import antd.Option
-import antd.Select
+import antd.Radio
+import antd.RadioOptionType
 import antd.Size
 import antd.SizeFactory
 import antd.Space
+import antd.setOptions
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoBooleanParam
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoParam
 import react.FC
@@ -61,34 +63,38 @@ val ButtonDemoControls = FC<ButtonDemoControlsProps> { props ->
 
         DemoParam {
             name = "shape"
-            changer = Select.create {
-                options = arrayOf(
+
+            changer = Radio.Group.create {
+                setOptions(listOf(
                     Option(ButtonShape.default.toString()),
                     Option(ButtonShape.circle.toString()),
                     Option(ButtonShape.round.toString()),
-                )
+                ))
+                value = props.buttonsShape.toString()
 
-                defaultValue = props.buttonsShape.toString()
+                optionType = RadioOptionType.button
 
-                onChange = { value ->
-                    props.onButtonsShapeChanged(ButtonShapeFactory.ofValue(value))
+                onChange = {
+                    props.onButtonsShapeChanged(ButtonShapeFactory.ofValue(it.target.value))
                 }
             }
         }
 
         DemoParam {
             name = "size"
-            changer = Select.create {
+
+            changer = Radio.Group.create {
                 options = arrayOf(
                     Option(Size.small.toString()),
                     Option(Size.middle.toString()),
                     Option(Size.large.toString()),
                 )
+                value = props.buttonsSize.toString()
 
-                defaultValue = props.buttonsSize.toString()
+                optionType = RadioOptionType.button
 
-                onChange = { value ->
-                    props.onButtonsSizeChanged(SizeFactory.ofValue(value))
+                onChange = {
+                    props.onButtonsSizeChanged(SizeFactory.ofValue(it.target.value))
                 }
             }
         }

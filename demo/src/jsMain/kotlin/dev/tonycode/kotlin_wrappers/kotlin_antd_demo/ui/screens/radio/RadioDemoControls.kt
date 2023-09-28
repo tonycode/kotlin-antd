@@ -2,7 +2,8 @@ package dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.radio
 
 import antd.Direction
 import antd.Option
-import antd.Select
+import antd.Radio
+import antd.RadioOptionType
 import antd.Size
 import antd.SizeFactory
 import antd.Space
@@ -33,17 +34,18 @@ val RadioDemoControls = FC<RadioDemoControlsProps> { props ->
 
         DemoParam {
             name = "size"
-            changer = Select.create {
+            changer = Radio.Group.create {
                 options = arrayOf(
                     Option(Size.small.toString()),
                     Option(Size.middle.toString()),
                     Option(Size.large.toString()),
                 )
-
                 defaultValue = props.size.toString()
 
-                onChange = { value ->
-                    props.onSizeChanged(SizeFactory.ofValue(value))
+                optionType = RadioOptionType.button
+
+                onChange = {
+                    props.onSizeChanged(SizeFactory.ofValue(it.target.value))
                 }
             }
         }

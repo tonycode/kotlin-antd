@@ -51,10 +51,8 @@ external interface CheckboxProps : PropsWithClassName {
 
     /**
      * The callback function that is triggered when the state changes
-     *
-     * default: null
      */
     //todo ((e: CheckboxChangeEvent) -> Unit)
-    var onChange: ChangeEventHandler<HTMLInputElement>?
+    var onChange: ChangeEventHandler<HTMLInputElement>
 
 }

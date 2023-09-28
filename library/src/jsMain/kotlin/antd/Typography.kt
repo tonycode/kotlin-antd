@@ -75,10 +75,8 @@ external interface TextProps : PropsWithClassName {
 
     /**
      * Set the handler to handle click event
-     *
-     * default: null
      */
-    var onClick: (() -> Unit)?
+    var onClick: () -> Unit
 
     /**
      * Bold style
@@ -96,10 +94,8 @@ external interface TextProps : PropsWithClassName {
 
     /**
      * Content type
-     *
-     * default: null
      */
-    var type: TypographyType?
+    var type: TypographyType
 
     /**
      * Underlined style

@@ -51,10 +51,8 @@ external interface ButtonProps : PropsWithClassName {
 
     /**
      * Redirect url of link button
-     *
-     * default: null
      */
-    var href: String?
+    var href: String
 
     /**
      * Set the original html type of button
@@ -67,10 +65,8 @@ external interface ButtonProps : PropsWithClassName {
 
     /**
      * Set the icon component of button
-     *
-     * default: null
      */
-    var icon: ReactNode?
+    var icon: ReactNode
 
     /**
      * Set the loading status of button
@@ -98,10 +94,8 @@ external interface ButtonProps : PropsWithClassName {
 
     /**
      * Same as target attribute of a, works when href is specified
-     *
-     * default: null
      */
-    var target: String?
+    var target: String
 
     /**
      * Set button type
@@ -112,9 +106,7 @@ external interface ButtonProps : PropsWithClassName {
 
     /**
      * Set the handler to handle `click` event
-     *
-     * default: null
      */
-    var onClick: ((event: MouseEvent) -> Unit)?
+    var onClick: (event: MouseEvent) -> Unit
 
 }

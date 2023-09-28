@@ -35,28 +35,28 @@ external interface RadioButtonProps : PropsWithClassName {
     /**
      * Whether get focus when component mounted
      *
-     * @default false
+     * default: false
      */
     var autoFocus: Boolean
 
     /**
      * Specifies whether the radio is selected
      *
-     * @default false
+     * default: false
      */
     var checked: Boolean
 
     /**
      * Specifies the initial state: whether or not the radio is selected
      *
-     * @default false
+     * default: false
      */
     var defaultChecked: Boolean
 
     /**
      * Disable radio
      *
-     * @default false
+     * default: false
      */
     var disabled: Boolean
 
@@ -73,7 +73,7 @@ external interface RadioGroupProps : PropsWithClassName {
     /**
      * The style type of radio button
      *
-     * @default [RadioButtonStyle.outline]
+     * default: [RadioButtonStyle.outline]
      */
     var buttonStyle: RadioButtonStyle
 
@@ -85,7 +85,7 @@ external interface RadioGroupProps : PropsWithClassName {
     /**
      * Disable all radio buttons
      *
-     * @default false
+     * default: false
      */
     var disabled: Boolean
 
@@ -111,7 +111,7 @@ external interface RadioGroupProps : PropsWithClassName {
     /**
      * The size of radio button style
      *
-     * @default [Size.middle]
+     * default: [Size.middle]
      */
     var size: Size
 

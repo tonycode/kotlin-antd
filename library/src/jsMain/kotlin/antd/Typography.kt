@@ -35,7 +35,7 @@ external interface TextProps : PropsWithClassName {
     /**
      * Code style
      *
-     * @default false
+     * default: false
      */
     var code: Boolean
 
@@ -44,14 +44,14 @@ external interface TextProps : PropsWithClassName {
     /**
      * Deleted line style
      *
-     * @default false
+     * default: false
      */
     var delete: Boolean
 
     /**
      * Disabled content
      *
-     * @default false
+     * default: false
      */
     var disabled: Boolean
 
@@ -62,49 +62,49 @@ external interface TextProps : PropsWithClassName {
     /**
      * Keyboard style
      *
-     * @default false
+     * default: false
      */
     var keyboard: Boolean
 
     /**
      * Marked style
      *
-     * @default false
+     * default: false
      */
     var mark: Boolean
 
     /**
      * Set the handler to handle click event
      *
-     * @default null
+     * default: null
      */
     var onClick: (() -> Unit)?
 
     /**
      * Bold style
      *
-     * @default false
+     * default: false
      */
     var strong: Boolean
 
     /**
      * Italic style
      *
-     * @default false
+     * default: false
      */
     var italic: Boolean
 
     /**
      * Content type
      *
-     * @default null
+     * default: null
      */
     var type: TypographyType?
 
     /**
      * Underlined style
      *
-     * @default false
+     * default: false
      */
     var underline: Boolean
 

@@ -26,7 +26,7 @@ external interface SpaceProps : PropsWithClassName {
     /**
      * The space direction
      *
-     * @default [Direction.horizontal]
+     * default: [Direction.horizontal]
      */
     var direction: Direction
 

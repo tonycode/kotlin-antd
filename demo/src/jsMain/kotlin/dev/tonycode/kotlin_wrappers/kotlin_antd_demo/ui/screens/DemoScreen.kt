@@ -5,6 +5,7 @@ import antd.Size
 import antd.Space
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.button.ButtonDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.radio.RadioDemoCard
+import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.spin.SpinDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.typography.TypographyTextDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.typography.TypographyTitleDemoCard
 import emotion.react.css
@@ -27,6 +28,8 @@ val DemoScreen = FC<Props> {
         TypographyTextDemoCard()
 
         RadioDemoCard()
+
+        SpinDemoCard()
 
     }
 

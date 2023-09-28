@@ -8,7 +8,6 @@ import antd.Space
 import emotion.react.css
 import react.FC
 import react.Props
-import react.dom.html.ReactHTML.div
 import web.cssom.Color
 import web.cssom.px
 
@@ -31,7 +30,7 @@ external interface ButtonDemoProps : Props {
 
 val ButtonDemo = FC<ButtonDemoProps> { props ->
 
-    div {
+    Space {
         css {
             if (props.areButtonsGhost) {
                 backgroundColor = Color("#ccc")
@@ -39,69 +38,66 @@ val ButtonDemo = FC<ButtonDemoProps> { props ->
                 borderRadius = 8.px
             }
         }
+        wrap = true
 
-        Space {
-            wrap = true
+        Button {
+            type = ButtonType.default
+            danger = props.areButtonsDanger
+            disabled = props.areButtonsDisabled
+            ghost = props.areButtonsGhost
+            loading = props.areButtonsLoading
+            shape = props.buttonsShape
+            size = props.buttonsSize
 
-            Button {
-                type = ButtonType.default
-                danger = props.areButtonsDanger
-                disabled = props.areButtonsDisabled
-                ghost = props.areButtonsGhost
-                loading = props.areButtonsLoading
-                shape = props.buttonsShape
-                size = props.buttonsSize
+            +"default"
+        }
 
-                +"default"
-            }
+        Button {
+            type = ButtonType.primary
+            danger = props.areButtonsDanger
+            disabled = props.areButtonsDisabled
+            ghost = props.areButtonsGhost
+            loading = props.areButtonsLoading
+            shape = props.buttonsShape
+            size = props.buttonsSize
 
-            Button {
-                type = ButtonType.primary
-                danger = props.areButtonsDanger
-                disabled = props.areButtonsDisabled
-                ghost = props.areButtonsGhost
-                loading = props.areButtonsLoading
-                shape = props.buttonsShape
-                size = props.buttonsSize
+            +"primary"
+        }
 
-                +"primary"
-            }
+        Button {
+            type = ButtonType.dashed
+            danger = props.areButtonsDanger
+            disabled = props.areButtonsDisabled
+            ghost = props.areButtonsGhost
+            loading = props.areButtonsLoading
+            shape = props.buttonsShape
+            size = props.buttonsSize
 
-            Button {
-                type = ButtonType.dashed
-                danger = props.areButtonsDanger
-                disabled = props.areButtonsDisabled
-                ghost = props.areButtonsGhost
-                loading = props.areButtonsLoading
-                shape = props.buttonsShape
-                size = props.buttonsSize
+            +"dashed"
+        }
 
-                +"dashed"
-            }
+        Button {
+            type = ButtonType.text
+            danger = props.areButtonsDanger
+            disabled = props.areButtonsDisabled
+            ghost = props.areButtonsGhost
+            loading = props.areButtonsLoading
+            shape = props.buttonsShape
+            size = props.buttonsSize
 
-            Button {
-                type = ButtonType.text
-                danger = props.areButtonsDanger
-                disabled = props.areButtonsDisabled
-                ghost = props.areButtonsGhost
-                loading = props.areButtonsLoading
-                shape = props.buttonsShape
-                size = props.buttonsSize
+            +"text"
+        }
 
-                +"text"
-            }
+        Button {
+            type = ButtonType.link
+            danger = props.areButtonsDanger
+            disabled = props.areButtonsDisabled
+            ghost = props.areButtonsGhost
+            loading = props.areButtonsLoading
+            shape = props.buttonsShape
+            size = props.buttonsSize
 
-            Button {
-                type = ButtonType.link
-                danger = props.areButtonsDanger
-                disabled = props.areButtonsDisabled
-                ghost = props.areButtonsGhost
-                loading = props.areButtonsLoading
-                shape = props.buttonsShape
-                size = props.buttonsSize
-
-                +"link"
-            }
+            +"link"
         }
     }
 

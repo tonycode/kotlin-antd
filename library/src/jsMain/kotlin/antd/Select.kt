@@ -4,13 +4,13 @@
 package antd
 
 import react.ComponentClass
-import react.Props
+import react.PropsWithClassName
 
 
 @JsName("Select")
 external val Select: ComponentClass<SelectProps>
 
-external interface SelectProps : Props {
+external interface SelectProps : PropsWithClassName {
 
     var defaultValue: String
 

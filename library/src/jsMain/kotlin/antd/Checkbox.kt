@@ -4,7 +4,7 @@
 package antd
 
 import react.ComponentClass
-import react.Props
+import react.PropsWithClassName
 import react.dom.events.ChangeEventHandler
 import web.html.HTMLInputElement
 
@@ -12,7 +12,7 @@ import web.html.HTMLInputElement
 @JsName("Checkbox")
 external val Checkbox: ComponentClass<CheckboxProps>
 
-external interface CheckboxProps : Props {
+external interface CheckboxProps : PropsWithClassName {
 
     /**
      * If get focus when component mounted

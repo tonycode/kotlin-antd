@@ -4,7 +4,7 @@
 package antd
 
 import react.ComponentClass
-import react.Props
+import react.PropsWithClassName
 import react.ReactNode
 
 
@@ -16,7 +16,7 @@ import react.ReactNode
 @JsName("Spin")
 external val Spin: ComponentClass<SpinProps>
 
-external interface SpinProps : Props {
+external interface SpinProps : PropsWithClassName {
 
     /**
      * Specifies a delay in milliseconds for loading state (prevent flush)

@@ -5,7 +5,7 @@ package antd
 
 import react.CSSProperties
 import react.ComponentClass
-import react.Props
+import react.PropsWithClassName
 
 
 // outlined
@@ -17,7 +17,7 @@ import react.Props
 @JsName("SettingFilled") external val SettingFilled: ComponentClass<IconProps>
 
 
-external interface IconProps : Props {
+external interface IconProps : PropsWithClassName {
 
     /**
      * Rotate by n degrees (not working in IE9)

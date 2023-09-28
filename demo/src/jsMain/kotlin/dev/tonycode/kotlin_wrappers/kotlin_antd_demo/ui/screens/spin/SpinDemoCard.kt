@@ -14,6 +14,8 @@ val SpinDemoCard = FC<Props> {
 
     var spinning: Boolean by useState(true)
 
+    var customIndicator: CustomIndicator by useState(CustomIndicator.NONE)
+
 
     DemoCard {
         title = "Spin"
@@ -21,13 +23,16 @@ val SpinDemoCard = FC<Props> {
         showcase = SpinDemo.create {
             this.size = size
             this.spinning = spinning
+            this.customIndicator = customIndicator
         }
 
         controls = SpinDemoControls.create {
             this.size = size
             this.spinning = spinning
+            this.customIndicator = customIndicator
             onSizeChanged = { size = it }
             onSpinningChanged = { spinning = it }
+            onCustomIndicatorChanged = { customIndicator = it }
         }
     }
 

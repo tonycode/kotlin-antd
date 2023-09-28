@@ -19,6 +19,8 @@ external interface SpinDemoControlsProps : SpinDemoProps {
 
     var onSpinningChanged: (spinning: Boolean) -> Unit
 
+    var onCustomIndicatorChanged: (customIndicator: CustomIndicator) -> Unit
+
 }
 
 val SpinDemoControls = FC<SpinDemoControlsProps> { props ->
@@ -51,6 +53,23 @@ val SpinDemoControls = FC<SpinDemoControlsProps> { props ->
             name = "spinning"
             value = props.spinning
             onValueChanged = { props.onSpinningChanged(it) }
+        }
+
+        DemoParam {
+            name = "indicator"
+
+            changer = Radio.Group.create {
+                setOptions(CustomIndicator.entries.toList().map { it.title })
+                value = props.customIndicator.title
+
+                optionType = RadioOptionType.button
+
+                onChange = {event ->
+                    props.onCustomIndicatorChanged(
+                        CustomIndicator.entries.find { it.title == event.target.value } ?: CustomIndicator.NONE
+                    )
+                }
+            }
         }
     }
 

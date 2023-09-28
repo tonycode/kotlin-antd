@@ -8,6 +8,7 @@ import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.button.ButtonDem
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.icon.IconDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.radio.RadioDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.spin.SpinDemoCard
+import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.tabs.TabsDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.typography.TypographyTextDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.typography.TypographyTitleDemoCard
 import emotion.react.css
@@ -31,6 +32,9 @@ val DemoScreen = FC<Props> {
 
         Section { title = "Data Entry" }
         RadioDemoCard()
+
+        Section { title = "Data Display" }
+        TabsDemoCard()
 
         Section { title = "Feedback" }
         SpinDemoCard()

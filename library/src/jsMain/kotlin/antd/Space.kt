@@ -8,6 +8,11 @@ import react.PropsWithClassName
 import react.ReactNode
 
 
+/**
+ * Set components spacing
+ *
+ * https://ant.design/components/space
+ */
 @JsName("Space")
 external val Space: ComponentClass<SpaceProps>
 
@@ -15,10 +20,8 @@ external interface SpaceProps : PropsWithClassName {
 
     /**
      * Align items
-     *
-     * @default null
      */
-    var align: Align?
+    var align: Align
 
     /**
      * The space direction
@@ -30,22 +33,21 @@ external interface SpaceProps : PropsWithClassName {
     /**
      * The space size
      *
-     * @default [Size.small]
+     * use [SpaceProps.setSize]
+     *
+     * default [Size.small]
      */
-    var size: Size
-    //todo Size[]
+    var size: dynamic  // Size | Number | (Size|Number)[]
 
     /**
      * Set split
-     *
-     * @default null
      */
-    var split: ReactNode?
+    var split: ReactNode
 
     /**
      * Auto wrap line, when `horizontal` effective
      *
-     * @default false
+     * default false
      */
     var wrap: Boolean
 

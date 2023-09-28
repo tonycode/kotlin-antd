@@ -1,13 +1,15 @@
 package dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.radio
 
-import antd.Checkbox
+import antd.Direction
 import antd.Option
 import antd.Select
 import antd.Size
 import antd.SizeFactory
 import antd.Space
+import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoBooleanParam
+import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoParam
 import react.FC
-import react.dom.html.ReactHTML.p
+import react.create
 
 
 external interface RadioDemoControlsProps : RadioDemoProps {
@@ -21,29 +23,28 @@ external interface RadioDemoControlsProps : RadioDemoProps {
 val RadioDemoControls = FC<RadioDemoControlsProps> { props ->
 
     Space {
-        // disabled
-        Checkbox {
-            checked = props.disabled
+        direction = Direction.vertical
 
-            onChange = {
-                props.onDisabledChanged(it.target.checked)
-            }
-
-            +"disabled"
+        DemoBooleanParam {
+            name = "disabled"
+            value = props.disabled
+            onValueChanged = { props.onDisabledChanged(it) }
         }
 
-        // size
-        p { +"size:" }
-        Select {
-            options = arrayOf(
-                Option(Size.small.toString()),
-                Option(Size.middle.toString()),
-                Option(Size.large.toString()),
-            )
-            defaultValue = props.size.toString()
+        DemoParam {
+            name = "size"
+            changer = Select.create {
+                options = arrayOf(
+                    Option(Size.small.toString()),
+                    Option(Size.middle.toString()),
+                    Option(Size.large.toString()),
+                )
 
-            onChange = { value ->
-                props.onSizeChanged(SizeFactory.ofValue(value))
+                defaultValue = props.size.toString()
+
+                onChange = { value ->
+                    props.onSizeChanged(SizeFactory.ofValue(value))
+                }
             }
         }
     }

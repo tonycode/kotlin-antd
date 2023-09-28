@@ -2,15 +2,16 @@ package dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.button
 
 import antd.ButtonShape
 import antd.ButtonShapeFactory
-import antd.Checkbox
+import antd.Direction
 import antd.Option
 import antd.Select
 import antd.Size
 import antd.SizeFactory
 import antd.Space
+import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoBooleanParam
+import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoParam
 import react.FC
-import react.Fragment
-import react.dom.html.ReactHTML.p
+import react.create
 
 
 external interface ButtonDemoControlsProps : ButtonDemoProps {
@@ -31,77 +32,59 @@ external interface ButtonDemoControlsProps : ButtonDemoProps {
 
 val ButtonDemoControls = FC<ButtonDemoControlsProps> { props ->
 
-    Fragment {
-        Space {
-            wrap = true
+    Space {
+        direction = Direction.vertical
 
-            // danger
-            Checkbox {
-                checked = props.areButtonsDanger
+        DemoBooleanParam {
+            name = "danger"
+            value = props.areButtonsDanger
+            onValueChanged = { props.onButtonsDangerChanged(it) }
+        }
 
-                onChange = {
-                    props.onButtonsDangerChanged(it.target.checked)
-                }
+        DemoBooleanParam {
+            name = "disabled"
+            value = props.areButtonsDisabled
+            onValueChanged = { props.onButtonsDisabledChanged(it) }
+        }
 
-                +"danger"
-            }
+        DemoBooleanParam {
+            name = "ghost"
+            value = props.areButtonsGhost
+            onValueChanged = { props.onButtonsGhostChanged(it) }
+        }
 
-            // disabled
-            Checkbox {
-                checked = props.areButtonsDisabled
+        DemoBooleanParam {
+            name = "loading"
+            value = props.areButtonsLoading
+            onValueChanged = { props.onButtonsLoadingChanged(it) }
+        }
 
-                onChange = {
-                    props.onButtonsDisabledChanged(it.target.checked)
-                }
-
-                +"disabled"
-            }
-
-            // ghost
-            Checkbox {
-                checked = props.areButtonsGhost
-
-                onChange = {
-                    props.onButtonsGhostChanged(it.target.checked)
-                }
-
-                +"ghost"
-            }
-
-            // loading
-            Checkbox {
-                checked = props.areButtonsLoading
-
-                onChange = {
-                    props.onButtonsLoadingChanged(it.target.checked)
-                }
-
-                +"loading"
-            }
-
-            // shape
-            p { +"shape:" }
-            Select {
+        DemoParam {
+            name = "shape"
+            changer = Select.create {
                 options = arrayOf(
                     Option(ButtonShape.default.toString()),
                     Option(ButtonShape.circle.toString()),
                     Option(ButtonShape.round.toString()),
                 )
+
                 defaultValue = props.buttonsShape.toString()
 
                 onChange = { value ->
                     props.onButtonsShapeChanged(ButtonShapeFactory.ofValue(value))
                 }
             }
+        }
 
-            // size
-            p { +"size:" }
-            Select {
+        DemoParam {
+            name = "size"
+            changer = Select.create {
                 options = arrayOf(
                     Option(Size.small.toString()),
                     Option(Size.middle.toString()),
                     Option(Size.large.toString()),
                 )
+
                 defaultValue = props.buttonsSize.toString()
 
                 onChange = { value ->
@@ -109,7 +92,6 @@ val ButtonDemoControls = FC<ButtonDemoControlsProps> { props ->
                 }
             }
         }
-
     }
 
 }

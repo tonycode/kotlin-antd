@@ -6,7 +6,7 @@
     - `./gradlew library:publishJsPublicationToMavenLocalRepository`
         - `cd ~/.m2/repository/dev/tonycode/kotlin-wrappers/kotlin-antd/`
 - **demo**
-    - `./gradlew demo:jsBrowserRun` (runs `Main.kt`, development)
+    - `./gradlew demo:jsBrowserRun` (runs `main.kt`, development)
         - open: `http://127.0.0.1:8080/`
         - `./gradlew demo:jsBrowserDevelopmentRun` - same as `jsBrowserRun`
         - `./gradlew demo:jsBrowserRun --continuous` - reload on code change (dev)

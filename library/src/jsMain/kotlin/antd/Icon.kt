@@ -8,6 +8,12 @@ import react.ComponentClass
 import react.PropsWithClassName
 
 
+//
+// Semantic vector graphics
+//
+// https://ant.design/components/icon
+//
+
 // outlined
 @JsName("HomeOutlined") external val HomeOutlined: ComponentClass<IconProps>
 @JsName("LoadingOutlined") external val LoadingOutlined: ComponentClass<IconProps>

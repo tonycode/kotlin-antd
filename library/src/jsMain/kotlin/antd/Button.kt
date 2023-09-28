@@ -9,6 +9,11 @@ import react.ReactNode
 import web.uievents.MouseEvent
 
 
+/**
+ * To trigger an operation
+ *
+ * https://ant.design/components/button
+ */
 @JsName("Button")
 external val Button: ComponentClass<ButtonProps>
 

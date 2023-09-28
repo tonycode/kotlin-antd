@@ -107,16 +107,21 @@ see usage examples here:
 ## Wrappers implemented
 
 - General
-    - `Button`
-    - `Typography.Title`
-    - `Typography.Text`
+    - `Button` (90%)
+    - `Icon` (1%)
+    - `Typography.Title` (70%)
+    - `Typography.Text` (70%)
 - Layout
-    - `Space`
+    - `Space` (100%)
 - Data Entry
-    - `Checkbox`
-    - `Radio.Button`
-    - `Radio.Group`
-    - `Select`
+    - `Checkbox` (95%)
+    - `Radio.Button` (95%)
+    - `Radio.Group` (95%)
+    - `Select` (10%)
+- Data Display
+    - `Tabs` (10%)
+- Feedback
+    - `Spin` (95%)
 
 Full list of `antd` js-library Components: https://ant.design/components/overview
 

@@ -7,6 +7,11 @@ import react.ComponentClass
 import react.PropsWithClassName
 
 
+/**
+ * Basic text writing, including headings, body text, lists, and more
+ *
+ * https://ant.design/components/typography
+ */
 @JsName("Typography")
 external object Typography {
 

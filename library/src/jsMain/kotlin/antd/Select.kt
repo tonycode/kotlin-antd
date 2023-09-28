@@ -7,6 +7,11 @@ import react.ComponentClass
 import react.PropsWithClassName
 
 
+/**
+ * Select component to select value from options
+ *
+ * https://ant.design/components/select
+ */
 @JsName("Select")
 external val Select: ComponentClass<SelectProps>
 

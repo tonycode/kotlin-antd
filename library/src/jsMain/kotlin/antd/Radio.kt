@@ -9,21 +9,27 @@ import react.dom.events.ChangeEventHandler
 import web.html.HTMLInputElement
 
 
+/**
+ * https://ant.design/components/radio
+ */
 @JsName("Radio")
 external object Radio {
 
+    /**
+     * https://ant.design/components/radio#radioradiobutton
+     */
     @JsName("Button")
     val Button: ComponentClass<RadioButtonProps>
 
+    /**
+     * https://ant.design/components/radio#radiogroup
+     */
     @JsName("Group")
     val Group: ComponentClass<RadioGroupProps>
 
 }
 
 
-/**
- * https://ant.design/components/radio#radioradiobutton
- */
 external interface RadioButtonProps : PropsWithClassName {
 
     /**
@@ -62,9 +68,6 @@ external interface RadioButtonProps : PropsWithClassName {
 }
 
 
-/**
- * https://ant.design/components/radio#radiogroup
- */
 external interface RadioGroupProps : PropsWithClassName {
 
     /**

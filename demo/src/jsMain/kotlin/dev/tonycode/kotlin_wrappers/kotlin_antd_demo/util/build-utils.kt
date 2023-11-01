@@ -8,6 +8,6 @@ fun getBuildInfo(): String {
         " (" +
         "#${BuildConfig.BUILD_NUMBER}" +
         ", git: ${BuildConfig.GIT_BRANCH_NAME}@${BuildConfig.GIT_COMMIT_ID}" +
-        ", built at ${BuildConfig.BUILD_TIME}" +
+        ", built on ${BuildConfig.BUILD_TIME}" +
         ")"
 }

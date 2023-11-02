@@ -9,7 +9,7 @@ based on **antd** version: [5.10.3](https://github.com/ant-design/ant-design/rel
 
 **LIVE DEMO**: https://tonycode.dev/demos/kotlin-antd-demo/
 
-(this is deployed `demo` module from this repository)
+(this is a deployed `demo` module from this repository)
 
 <hr />
 

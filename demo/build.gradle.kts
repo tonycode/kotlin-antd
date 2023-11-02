@@ -33,10 +33,10 @@ buildConfig {
     buildConfigField("String", "GIT_BRANCH_NAME", "\"${ grgit.branch.current().name }\"")
     buildConfigField("String", "GIT_COMMIT_ID", "\"${ grgit.head().abbreviatedId }\"")
     buildConfigField("String", "BUILD_TIME", "\"${
-        SimpleDateFormat("yyyy.MM.dd, EEE HH:mm:ss.SSS").apply {
+        SimpleDateFormat("yyyy.MM.dd EEE 'at' HH:mm:ss.SSS z").apply {
             timeZone = TimeZone.getTimeZone("GMT")
         }.format(Date(System.currentTimeMillis()))
-    } GMT\"")
+    }\"")
     buildConfigField("long", "BUILD_TIME_MILLIS", "${ System.currentTimeMillis() }L")
 
     buildConfigField("boolean", "IS_PRODUCTION", isProduction.toString())

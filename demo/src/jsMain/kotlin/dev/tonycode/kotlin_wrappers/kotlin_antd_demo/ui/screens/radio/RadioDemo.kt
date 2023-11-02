@@ -24,15 +24,15 @@ external interface RadioDemoProps : Props {
 val RadioDemo = FC<RadioDemoProps> { props ->
 
     val options = listOf(
-        Option(label = "Apple", value = "Apple"),
-        Option(label = "Pear", value = "Pear"),
-        Option(label = "Orange", value = "Orange"),
+        Option("Apple"),
+        Option("Pear"),
+        Option("Orange"),
     )
 
     val optionsWithDisabled = listOf(
-        Option(label = "Apple", value = "Apple"),
-        Option(label = "Pear", value = "Pear"),
-        Option(label = "Orange", value = "Orange", disabled = true),
+        Option("Apple"),
+        Option("Pear"),
+        Option("Orange", disabled = true),
     )
 
     var selectedValue: String by useState("Apple")

@@ -9,6 +9,8 @@ data class Option(
 
     val label: String = value,
 
+    val id: String? = null,
+
     val disabled: Boolean = false
 
 )

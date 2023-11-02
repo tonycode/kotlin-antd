@@ -3,7 +3,7 @@
 [versions]
 kotlin = "1.9.10"
 
-antd = "5.9.2"
+antd = "5.10.3"
 
 [libraries]
 kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin" }

@@ -3,7 +3,7 @@ kotlin-antd
 
 Kotlin wrapper for **Ant Design** (React UI library `antd`, https://ant.design/docs/react/introduce)
 
-based on **antd** version: [5.9.2](https://github.com/ant-design/ant-design/releases/tag/5.9.2)
+based on **antd** version: [5.10.3](https://github.com/ant-design/ant-design/releases/tag/5.10.3)
 
 <hr />
 

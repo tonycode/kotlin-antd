@@ -101,33 +101,32 @@ publishing {
 
 fun MavenPublication.configurePom() {
     pom {
-        name.set(rootProject.name)
-        description.set(
+        name = rootProject.name
+        description =
             "Kotlin wrapper for Ant Design (React UI library \"antd\", https://ant.design/docs/react/introduce)"
-        )
-        url.set("https://github.com/tonycode/kotlin-antd")
+        url = "https://github.com/tonycode/kotlin-antd"
 
         licenses {
             license {
-                name.set("MIT License")
-                url.set("https://github.com/tonycode/kotlin-antd/blob/main/LICENSE")
+                name = "MIT License"
+                url = "https://github.com/tonycode/kotlin-antd/blob/main/LICENSE"
             }
         }
 
         developers {
             developer {
-                id.set("tonycode")
-                name.set("Anton Vasilev")
-                email.set("opensource@tonycode.dev")
-                organization.set("tonycode")
-                organizationUrl.set("https://tonycode.dev/")
+                id = "tonycode"
+                name = "Anton Vasilev"
+                email = "opensource@tonycode.dev"
+                organization = "tonycode"
+                organizationUrl = "https://tonycode.dev/"
             }
         }
 
         scm {
-            connection.set("scm:git:git://github.com/tonycode/kotlin-antd.git")
-            developerConnection.set("scm:git:git@github.com:tonycode/kotlin-antd.git")
-            url.set("https://github.com/tonycode/kotlin-antd")
+            connection = "scm:git:git://github.com/tonycode/kotlin-antd.git"
+            developerConnection = "scm:git:git@github.com:tonycode/kotlin-antd.git"
+            url = "https://github.com/tonycode/kotlin-antd"
         }
     }
 }

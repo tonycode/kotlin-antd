@@ -10,7 +10,7 @@ pluginManagement {
 
 @Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)  // kotlin-js adds "Node Distributions" repo
+    repositoriesMode = RepositoriesMode.PREFER_PROJECT  // kotlin-js adds "Node Distributions" repo
 
     repositories {
         // https://mvnrepository.com/ - find repository & artifact version for a given package

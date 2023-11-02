@@ -49,7 +49,7 @@ kotlin {
             commonWebpackConfig(Action {
                 outputFileName = "$projectArtifact.js"
                 sourceMaps = !isProduction
-                cssSupport { enabled.set(true) }
+                cssSupport { enabled = true }
             })
         }
 

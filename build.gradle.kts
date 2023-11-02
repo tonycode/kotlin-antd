@@ -23,7 +23,7 @@ plugins.withType<YarnPlugin> {
 
 plugins.withType<NodeJsRootPlugin> {
     the<NodeJsRootExtension>().apply {
-        nodeVersion = "18.17.1"  // https://nodejs.org/en - LTS
+        nodeVersion = "20.9.0"  // https://nodejs.org/en - LTS
     }
 }
 

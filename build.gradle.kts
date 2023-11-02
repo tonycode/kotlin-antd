@@ -31,7 +31,7 @@ plugins.withType<NodeJsRootPlugin> {
 //region tasks
 /* generate gradle-wrapper with `gradle wrapper` */
 tasks.wrapper {
-    gradleVersion = "8.3"
+    gradleVersion = "8.4"
     distributionType = Wrapper.DistributionType.ALL
 }
 

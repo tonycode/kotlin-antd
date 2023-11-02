@@ -97,7 +97,7 @@ external interface RadioGroupProps : PropsWithClassName {
     /**
      * Set children optional
      *
-     * @see Radio-ext.kt
+     * see: Radio-ext.kt
      */
     var options: dynamic  // string[] | number[] | Array<{ label: ReactNode; value: string; disabled?: boolean; }>
 

@@ -1,6 +1,7 @@
 package antd
 
 
+//region RadioGroupProps.options setters
 fun RadioGroupProps.setOptions(options: List<String>) {
     this.options = options.toTypedArray()
 }
@@ -16,3 +17,4 @@ fun RadioGroupProps.setOptions(options: List<Number>) {
 fun RadioGroupProps.setOptions(options: List<Option>) {
     this.options = options.toTypedArray()
 }
+//endregion

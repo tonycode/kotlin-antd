@@ -13,6 +13,8 @@ import web.uievents.MouseEvent
  * To trigger an operation
  *
  * https://ant.design/components/button
+ *
+ * see: https://ant.design/components/button#when-to-use
  */
 @JsName("Button")
 external val Button: ComponentClass<ButtonProps>
@@ -26,7 +28,7 @@ external interface ButtonProps : PropsWithClassName {
      */
     var block: Boolean
 
-    //todo classNames
+    //todo classNames - Record<SemanticDOM, string>
 
     /**
      * Set the danger status of button
@@ -90,10 +92,10 @@ external interface ButtonProps : PropsWithClassName {
      */
     var size: Size
 
-    //todo styles
+    //todo styles - Record<SemanticDOM, CSSProperties>
 
     /**
-     * Same as target attribute of a, works when href is specified
+     * Same as target attribute of `a`, works when href is specified
      */
     var target: String
 

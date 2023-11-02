@@ -12,7 +12,7 @@ fun SpaceProps.setSize(px: Number) {
 }
 //endregion
 
-//region size = (Size|Number)[]
+//region size = Size[] | Number[]
 fun SpaceProps.setSize(horizontalSize: Size, verticalSize: Size) {
     this.size = arrayOf(horizontalSize, verticalSize)
 }

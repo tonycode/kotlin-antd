@@ -9,6 +9,11 @@ import react.dom.events.ChangeEventHandler
 import web.html.HTMLInputElement
 
 
+/**
+ * Checkbox component
+ *
+ * https://ant.design/components/checkbox
+ */
 @JsName("Checkbox")
 external val Checkbox: ComponentClass<CheckboxProps>
 

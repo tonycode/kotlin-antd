@@ -35,9 +35,9 @@ external interface SpaceProps : PropsWithClassName {
      *
      * use [SpaceProps.setSize]
      *
-     * default [Size.small]
+     * default: [Size.small]
      */
-    var size: dynamic  // Size | Number | (Size|Number)[]
+    var size: dynamic  // Size | Number | Size[] | Number[]
 
     /**
      * Set split
@@ -45,10 +45,13 @@ external interface SpaceProps : PropsWithClassName {
     var split: ReactNode
 
     /**
-     * Auto wrap line, when `horizontal` effective
+     * Auto wrap line, when [direction] "horizontal" effective
      *
-     * default false
+     * default: false
      */
     var wrap: Boolean
 
 }
+
+
+//todo Space.Compact - https://ant.design/components/space#spacecompact

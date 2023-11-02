@@ -9,6 +9,11 @@ package antd
 @JsName("""(/*union*/{
     start: 'start', end: 'end', center: 'center', baseline: 'baseline'
 }/*union*/)""")
+/**
+ * Align items
+ *
+ * see: https://ant.design/components/space#api "align" property
+ */
 sealed external interface Align {
 
     companion object {

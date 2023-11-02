@@ -31,7 +31,7 @@ external interface SpinProps : PropsWithClassName {
     /**
      * The size of Spin
      *
-     * default [SpinSize.default]
+     * default: [SpinSize.default]
      */
     var size: SpinSize
 

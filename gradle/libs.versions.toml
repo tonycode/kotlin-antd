@@ -17,6 +17,6 @@ kotlinw-react-dom = { module = "org.jetbrains.kotlin-wrappers:kotlin-react-dom",
 
 [plugins]
 buildconfig = { id = "com.github.gmazzo.buildconfig", version = "4.1.2" }  # Generates BuildConfig object (https://github.com/gmazzo/gradle-buildconfig-plugin)
-gradle-versions = { id = "com.github.ben-manes.versions", version = "0.48.0" }  # Search for dependency updates (https://github.com/ben-manes/gradle-versions-plugin)
-grgit = { id = "org.ajoberstar.grgit", version = "5.2.0" }  # Manipulate with project's git repo (https://github.com/ajoberstar/grgit)
+gradle-versions = { id = "com.github.ben-manes.versions", version = "0.49.0" }  # Search for dependency updates (https://github.com/ben-manes/gradle-versions-plugin)
+grgit = { id = "org.ajoberstar.grgit", version = "5.2.1" }  # Manipulate with project's git repo (https://github.com/ajoberstar/grgit)
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }  # Adds support for Kotlin/JS

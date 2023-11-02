@@ -1,5 +1,7 @@
 package antd
 
+import web.cssom.Length
+
 
 //region SpaceProps.size setters
 //region size = Size | Number
@@ -9,6 +11,10 @@ fun SpaceProps.setSize(size: Size) {
 
 fun SpaceProps.setSize(px: Number) {
     this.size = px
+}
+
+fun SpaceProps.setSize(size: Length) {
+    this.size = size
 }
 //endregion
 

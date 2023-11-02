@@ -6,6 +6,7 @@ package antd
 import react.CSSProperties
 import react.ComponentClass
 import react.PropsWithClassName
+import web.cssom.Color
 
 
 //
@@ -17,10 +18,15 @@ import react.PropsWithClassName
 // outlined
 @JsName("HomeOutlined") external val HomeOutlined: ComponentClass<IconProps>
 @JsName("LoadingOutlined") external val LoadingOutlined: ComponentClass<IconProps>
+@JsName("StarOutlined") external val StarOutlined: ComponentClass<IconProps>
 @JsName("SyncOutlined") external val SyncOutlined: ComponentClass<IconProps>
 
 // filled
 @JsName("SettingFilled") external val SettingFilled: ComponentClass<IconProps>
+@JsName("StarFilled") external val StarFilled: ComponentClass<IconProps>
+
+// twotone
+@JsName("StarTwoTone") external val StarTwoTone: ComponentClass<IconProps>
 
 
 external interface IconProps : PropsWithClassName {
@@ -44,9 +50,7 @@ external interface IconProps : PropsWithClassName {
 
     /**
      * Only supports the two-tone icon. Specify the primary color
-     *
-     * value: hex color
      */
-    var twoToneColor: String
+    var twoToneColor: Color
 
 }

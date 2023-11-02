@@ -7,6 +7,7 @@ import react.ComponentClass
 import react.PropsWithClassName
 import react.ReactNode
 import web.uievents.MouseEvent
+import web.window.WindowTarget
 
 
 /**
@@ -97,7 +98,7 @@ external interface ButtonProps : PropsWithClassName {
     /**
      * Same as target attribute of `a`, works when href is specified
      */
-    var target: String
+    var target: WindowTarget
 
     /**
      * Set button type

@@ -74,10 +74,11 @@ external interface ButtonProps : PropsWithClassName {
     /**
      * Set the loading status of button
      *
+     * use [ButtonProps.setLoading]
+     *
      * default: false
      */
-    var loading: Boolean
-    //todo { delay: number }
+    var loading: dynamic  // Boolean | { delay: Number }
 
     /**
      * Can be set button shape

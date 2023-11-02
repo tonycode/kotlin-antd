@@ -26,7 +26,7 @@
 
 ### chore
 
-- `./gradlew clean` - delete build dirs (`./build/`, `./web/build/`)
+- `./gradlew clean` - delete build dirs (`./build/`, `./library/build/`, `./demo/build/`)
 - `./gradlew dependencyUpdates` - check for dependency updates, result will be printed in console
     - `./gradlew showDependencyUpdates` - show generated report in web-browser
         - or `xdg-open build/dependencyUpdates/report.html`

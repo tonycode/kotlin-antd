@@ -7,25 +7,28 @@ package antd
 )
 // language=JavaScript
 @JsName("""(/*union*/{
-    large: 'large', middle: 'middle', small: 'small'
+    small: 'small', middle: 'middle', large: 'large'
 }/*union*/)""")
 sealed external interface Size {
 
     companion object {
-        val large: Size
-        val middle: Size
         val small: Size
+        val middle: Size
+        val large: Size
     }
 
 }
 
 
 object SizeFactory {
+    /**
+     * default: [Size.small]
+     */
     fun ofValue(value: String): Size {
         return when (value) {
-            Size.small.toString() -> Size.small
+            Size.middle.toString() -> Size.middle
             Size.large.toString() -> Size.large
-            else -> Size.middle
+            else -> Size.small
         }
     }
 }

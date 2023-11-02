@@ -6,7 +6,7 @@ import react.Fragment
 import react.Props
 
 
-val TypographyTitleDemo = FC<Props> {
+val TypographyTitleDemo = FC<Props>("TypographyTitleDemo") {
 
     Fragment {
         Typography.Title {

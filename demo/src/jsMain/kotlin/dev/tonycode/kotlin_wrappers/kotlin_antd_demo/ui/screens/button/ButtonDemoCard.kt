@@ -9,7 +9,7 @@ import react.create
 import react.useState
 
 
-val ButtonDemoCard = FC<Props> {
+val ButtonDemoCard = FC<Props>("ButtonDemoCard") {
 
     var areButtonsDanger: Boolean by useState(false)
     var areButtonsDisabled: Boolean by useState(false)

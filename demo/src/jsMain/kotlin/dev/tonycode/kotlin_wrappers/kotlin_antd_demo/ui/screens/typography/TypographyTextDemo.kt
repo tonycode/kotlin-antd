@@ -8,7 +8,7 @@ import react.FC
 import react.Props
 
 
-val TypographyTextDemo = FC<Props> {
+val TypographyTextDemo = FC<Props>("TypographyTextDemo") {
 
     Space {
         direction = Direction.vertical

@@ -23,7 +23,7 @@ external interface DemoCardProps : Props {
 
 }
 
-val DemoCard = FC<DemoCardProps> { props ->
+val DemoCard = FC<DemoCardProps>("DemoCard") { props ->
 
     val controls = props.controls
 

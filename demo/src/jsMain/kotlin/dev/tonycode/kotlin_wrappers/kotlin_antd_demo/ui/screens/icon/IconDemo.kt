@@ -15,7 +15,7 @@ import react.Props
 import web.cssom.Color
 
 
-val IconDemo = FC<Props> {
+val IconDemo = FC<Props>("IconDemo") {
 
     Space {
         direction = Direction.vertical

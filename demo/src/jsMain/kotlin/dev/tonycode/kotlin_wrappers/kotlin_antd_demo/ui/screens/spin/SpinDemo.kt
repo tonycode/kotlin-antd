@@ -21,7 +21,7 @@ external interface SpinDemoProps : Props {
 
 }
 
-val SpinDemo = FC<SpinDemoProps> { props ->
+val SpinDemo = FC<SpinDemoProps>("SpinDemo") { props ->
 
     Spin {
         size = props.size

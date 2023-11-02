@@ -9,7 +9,7 @@ import react.create
 import react.useState
 
 
-val TabsDemo = FC<Props> {
+val TabsDemo = FC<Props>("TabsDemo") {
 
     var activeTab: DummyTabs by useState(DummyTabs.TAB1)
 

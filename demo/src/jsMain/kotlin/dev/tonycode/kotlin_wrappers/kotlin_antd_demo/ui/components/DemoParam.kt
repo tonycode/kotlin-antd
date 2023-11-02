@@ -18,7 +18,7 @@ external interface DemoParamProps : Props {
 
 }
 
-val DemoParam = FC<DemoParamProps> { props ->
+val DemoParam = FC<DemoParamProps>("DemoParam") { props ->
 
     Space {
         align = Align.center

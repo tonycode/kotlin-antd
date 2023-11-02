@@ -18,7 +18,7 @@ import react.Props
 import web.cssom.pct
 
 
-val DemoScreen = FC<Props> {
+val DemoScreen = FC<Props>("DemoScreen") {
 
     Space {
         css { width = 100.pct }

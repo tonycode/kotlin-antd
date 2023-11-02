@@ -23,7 +23,7 @@ external interface SpinDemoControlsProps : SpinDemoProps {
 
 }
 
-val SpinDemoControls = FC<SpinDemoControlsProps> { props ->
+val SpinDemoControls = FC<SpinDemoControlsProps>("SpinDemoControls") { props ->
 
     Space {
         direction = Direction.vertical

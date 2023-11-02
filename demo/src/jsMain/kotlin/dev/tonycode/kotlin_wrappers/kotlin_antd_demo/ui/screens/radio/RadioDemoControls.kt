@@ -21,7 +21,7 @@ external interface RadioDemoControlsProps : RadioDemoProps {
 
 }
 
-val RadioDemoControls = FC<RadioDemoControlsProps> { props ->
+val RadioDemoControls = FC<RadioDemoControlsProps>("RadioDemoControls") { props ->
 
     Space {
         direction = Direction.vertical

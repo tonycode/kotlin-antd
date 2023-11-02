@@ -21,7 +21,7 @@ external interface RadioDemoProps : Props {
 
 }
 
-val RadioDemo = FC<RadioDemoProps> { props ->
+val RadioDemo = FC<RadioDemoProps>("RadioDemo") { props ->
 
     val options = listOf(
         Option("Apple"),

@@ -8,7 +8,7 @@ import react.create
 import react.useState
 
 
-val RadioDemoCard = FC<Props> {
+val RadioDemoCard = FC<Props>("RadioDemoCard") {
 
     var areGroupsDisabled: Boolean by useState(false)
 

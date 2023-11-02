@@ -12,7 +12,7 @@ import web.cssom.Auto
 import web.cssom.Display
 
 
-val BuildInfoView = FC<Props> {
+val BuildInfoView = FC<Props>("BuildInfoView") {
 
     div {
         css {

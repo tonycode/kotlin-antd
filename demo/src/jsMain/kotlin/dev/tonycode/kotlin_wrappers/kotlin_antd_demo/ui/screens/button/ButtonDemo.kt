@@ -28,7 +28,7 @@ external interface ButtonDemoProps : Props {
 
 }
 
-val ButtonDemo = FC<ButtonDemoProps> { props ->
+val ButtonDemo = FC<ButtonDemoProps>("ButtonDemo") { props ->
 
     Space {
         css {

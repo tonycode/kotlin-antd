@@ -22,7 +22,7 @@ import web.cssom.px
 import web.cssom.times
 
 
-val App = FC<Props> {
+val App = FC<Props>("App") {
 
     Global {
         styles {

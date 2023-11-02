@@ -17,7 +17,7 @@ external interface DemoBooleanParamProps : Props {
 
 }
 
-val DemoBooleanParam = FC<DemoBooleanParamProps> { props ->
+val DemoBooleanParam = FC<DemoBooleanParamProps>("DemoBooleanParam") { props ->
 
     DemoParam {
         name = props.name

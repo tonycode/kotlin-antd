@@ -6,7 +6,7 @@ import react.Props
 import react.create
 
 
-val TabsDemoCard = FC<Props> {
+val TabsDemoCard = FC<Props>("TabsDemoCard") {
 
     DemoCard {
         title = "Tabs"

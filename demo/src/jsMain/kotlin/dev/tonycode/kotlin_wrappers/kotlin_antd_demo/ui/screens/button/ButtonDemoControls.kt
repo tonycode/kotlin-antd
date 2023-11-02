@@ -32,7 +32,7 @@ external interface ButtonDemoControlsProps : ButtonDemoProps {
 
 }
 
-val ButtonDemoControls = FC<ButtonDemoControlsProps> { props ->
+val ButtonDemoControls = FC<ButtonDemoControlsProps>("ButtonDemoControls") { props ->
 
     Space {
         direction = Direction.vertical

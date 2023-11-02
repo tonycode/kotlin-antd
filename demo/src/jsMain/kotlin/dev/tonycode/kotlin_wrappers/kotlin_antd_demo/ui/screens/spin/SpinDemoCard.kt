@@ -8,7 +8,7 @@ import react.create
 import react.useState
 
 
-val SpinDemoCard = FC<Props> {
+val SpinDemoCard = FC<Props>("SpinDemoCard") {
 
     var size: SpinSize by useState(SpinSize.default)
 

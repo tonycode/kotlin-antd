@@ -14,7 +14,7 @@ external interface SectionProps : Props {
 
 }
 
-val Section = FC<SectionProps> { props ->
+val Section = FC<SectionProps>("Section") { props ->
 
     Typography.Title {
         css {

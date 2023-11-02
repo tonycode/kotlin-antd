@@ -4,6 +4,7 @@
 package antd
 
 import react.ComponentClass
+import react.PropsWithChildren
 import react.PropsWithClassName
 import react.ReactNode
 import web.uievents.MouseEvent
@@ -20,7 +21,7 @@ import web.window.WindowTarget
 @JsName("Button")
 external val Button: ComponentClass<ButtonProps>
 
-external interface ButtonProps : PropsWithClassName {
+external interface ButtonProps : PropsWithClassName, PropsWithChildren {
 
     /**
      * Option to fit button width to its parent width

@@ -37,7 +37,7 @@ val DemoParam = FC<DemoParamProps> { props ->
                 +":"
             }
 
-            child(props.changer)
+            +props.changer
         }
     }
 

@@ -4,6 +4,7 @@
 package antd
 
 import react.ComponentClass
+import react.PropsWithChildren
 import react.PropsWithClassName
 import react.ReactNode
 
@@ -16,7 +17,7 @@ import react.ReactNode
 @JsName("Space")
 external val Space: ComponentClass<SpaceProps>
 
-external interface SpaceProps : PropsWithClassName {
+external interface SpaceProps : PropsWithClassName, PropsWithChildren {
 
     /**
      * Align items

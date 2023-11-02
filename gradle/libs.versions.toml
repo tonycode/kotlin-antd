@@ -8,10 +8,10 @@ antd = "5.9.2"
 [libraries]
 kotlin-bom = { module = "org.jetbrains.kotlin:kotlin-bom", version.ref = "kotlin" }
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
-kotlin-wrappers-bom = "org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:1.0.0-pre.604"
+kotlin-wrappers-bom = "org.jetbrains.kotlin-wrappers:kotlin-wrappers-bom:1.0.0-pre.636"
 kotlinw-emotion = { module = "org.jetbrains.kotlin-wrappers:kotlin-emotion" }  # React Emotion (CSS), 11.11.1
-kotlinw-react = { module = "org.jetbrains.kotlin-wrappers:kotlin-react", version = "18.2.0-pre.604" }  # React, 18.2.0
-kotlinw-react-dom = { module = "org.jetbrains.kotlin-wrappers:kotlin-react-dom", version = "18.2.0-pre.604" }  # React DOM, 18.2.0
+kotlinw-react = { module = "org.jetbrains.kotlin-wrappers:kotlin-react" }  # React, 18.2.0
+kotlinw-react-dom = { module = "org.jetbrains.kotlin-wrappers:kotlin-react-dom" }  # React DOM, 18.2.0
 
 [bundles]
 

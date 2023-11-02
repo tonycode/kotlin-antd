@@ -38,6 +38,10 @@ kotlin {
     sourceSets {
         val jsMain by getting {
             dependencies {
+                api(platform(libs.kotlin.bom.get()))  // Align versions of all Kotlin components
+                api(libs.kotlin.stdlib)  // Use the Kotlin standard library
+
+                api(platform(libs.kotlin.wrappers.bom.get()))
                 api(libs.kotlinw.react)
                 api(libs.kotlinw.react.dom)
 

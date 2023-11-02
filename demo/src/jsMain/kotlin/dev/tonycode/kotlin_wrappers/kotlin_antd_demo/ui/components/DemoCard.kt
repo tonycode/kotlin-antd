@@ -56,7 +56,8 @@ val DemoCard = FC<DemoCardProps> { props ->
             // showcase
             div {
                 css { marginTop = (1.5 * Dimens.cardMargin) }
-                child(props.showcase)
+
+                +props.showcase
             }
         }
 
@@ -64,7 +65,8 @@ val DemoCard = FC<DemoCardProps> { props ->
         if (controls != null) {
             div {
                 css { padding = Dimens.cardMargin }
-                child(controls)
+
+                +controls
             }
         }
     }

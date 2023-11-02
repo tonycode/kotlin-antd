@@ -4,6 +4,7 @@
 package antd
 
 import react.ComponentClass
+import react.PropsWithChildren
 import react.PropsWithClassName
 
 
@@ -30,7 +31,7 @@ external object Typography {
 /**
  * https://ant.design/components/typography#typographytext
  */
-external interface TextProps : PropsWithClassName {
+external interface TextProps : PropsWithClassName, PropsWithChildren {
 
     /**
      * Code style
@@ -107,7 +108,7 @@ external interface TextProps : PropsWithClassName {
 }
 
 
-external interface LinkProps : PropsWithClassName {
+external interface LinkProps : PropsWithClassName, PropsWithChildren {
 
     var href: String
 
@@ -116,7 +117,7 @@ external interface LinkProps : PropsWithClassName {
 }
 
 
-external interface TitleProps : PropsWithClassName {
+external interface TitleProps : PropsWithClassName, PropsWithChildren {
 
     var level: Int
 

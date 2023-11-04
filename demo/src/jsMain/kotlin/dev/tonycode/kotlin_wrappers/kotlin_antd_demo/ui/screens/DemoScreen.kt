@@ -3,7 +3,8 @@ package dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens
 import antd.Direction
 import antd.Size
 import antd.Space
-import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.Section
+import antd.TabItemType
+import antd.Tabs
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.alert.AlertDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.button.ButtonDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.icon.IconDemoCard
@@ -13,33 +14,65 @@ import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.tabs.TabsDemoCar
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.typography.TypographyTextDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.typography.TypographyTitleDemoCard
 import emotion.react.css
+import js.core.jso
 import react.FC
+import react.Fragment
 import react.Props
+import react.ReactNode
+import react.create
+import react.useState
 import web.cssom.pct
 
 
 val DemoScreen = FC<Props>("DemoScreen") {
 
-    Space {
-        css { width = 100.pct }
-        direction = Direction.vertical
-        size = Size.large
+    var activeTab: Section by useState(Section.GENERAL)
 
-        Section { title = "General" }
+
+    Tabs {
+        activeKey = activeTab.name
+
+        items = Section.entries.map { section ->
+            jso<TabItemType> {
+                key = section.name
+                label = section.title
+
+                children = Space.create {
+                    css { width = 100.pct }
+                    direction = Direction.vertical
+                    size = Size.large
+
+                    +section.createContentFunc.invoke()
+                }
+            }
+        }.toTypedArray()
+
+        onChange = { activeTab = Section.valueOf(it) }
+    }
+
+}
+
+
+enum class Section(val title: String, val createContentFunc: () -> ReactNode) {
+
+    GENERAL("General", { Fragment.create {
         ButtonDemoCard()
         IconDemoCard()
         TypographyTitleDemoCard()
         TypographyTextDemoCard()
+    } }),
 
-        Section { title = "Data Entry" }
+    DATA_ENTRY("Data Entry", { Fragment.create {
         RadioDemoCard()
+    } }),
 
-        Section { title = "Data Display" }
+    DATA_DISPLAY("Data Display", { Fragment.create {
         TabsDemoCard()
+    } }),
 
-        Section { title = "Feedback" }
+    FEEDBACK("Feedback", { Fragment.create {
         AlertDemoCard()
         SpinDemoCard()
-    }
+    } }),
 
 }

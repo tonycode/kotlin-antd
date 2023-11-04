@@ -20,6 +20,7 @@ val ButtonDemoCard = FC<Props>("ButtonDemoCard") {
 
     DemoCard {
         title = "Button"
+        demoSrcLink = "button/ButtonDemo.kt"
 
         showcase = ButtonDemo.create {
             this.areButtonsDanger = areButtonsDanger

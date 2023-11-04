@@ -17,6 +17,7 @@ val RadioDemoCard = FC<Props>("RadioDemoCard") {
 
     DemoCard {
         title = "Radio.Group"
+        demoSrcLink = "radio/RadioDemo.kt"
 
         showcase = RadioDemo.create {
             disabled = areGroupsDisabled

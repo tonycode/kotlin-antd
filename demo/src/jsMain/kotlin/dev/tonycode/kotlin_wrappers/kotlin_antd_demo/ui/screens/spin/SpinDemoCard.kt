@@ -19,6 +19,7 @@ val SpinDemoCard = FC<Props>("SpinDemoCard") {
 
     DemoCard {
         title = "Spin"
+        demoSrcLink = "spin/SpinDemo.kt"
 
         showcase = SpinDemo.create {
             this.size = size

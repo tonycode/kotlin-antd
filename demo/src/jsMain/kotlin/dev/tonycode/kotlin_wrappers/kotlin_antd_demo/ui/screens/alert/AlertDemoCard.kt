@@ -25,6 +25,7 @@ val AlertDemoCard = FC<Props>("AlertDemoCard") {
 
     DemoCard {
         title = "Alert"
+        demoSrcLink = "alert/AlertDemo.kt"
 
         showcase = AlertDemo.create {
             this.alertType = alertType

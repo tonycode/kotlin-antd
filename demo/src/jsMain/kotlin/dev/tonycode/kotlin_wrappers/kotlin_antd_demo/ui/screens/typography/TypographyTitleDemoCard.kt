@@ -10,6 +10,8 @@ val TypographyTitleDemoCard = FC<Props>("TypographyTitleDemoCard") {
 
     DemoCard {
         title = "Typography.Title"
+        demoSrcLink = "typography/TypographyTitleDemo.kt"
+
         showcase = TypographyTitleDemo.create()
     }
 

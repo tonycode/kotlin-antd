@@ -23,6 +23,7 @@ import web.cssom.Color
 @JsName("SyncOutlined") external val SyncOutlined: ComponentClass<IconProps>
 
 // filled
+@JsName("GithubFilled") external val GithubFilled: ComponentClass<IconProps>
 @JsName("SettingFilled") external val SettingFilled: ComponentClass<IconProps>
 @JsName("StarFilled") external val StarFilled: ComponentClass<IconProps>
 

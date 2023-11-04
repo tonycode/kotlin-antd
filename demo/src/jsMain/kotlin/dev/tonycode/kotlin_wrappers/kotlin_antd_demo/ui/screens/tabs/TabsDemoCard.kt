@@ -10,6 +10,8 @@ val TabsDemoCard = FC<Props>("TabsDemoCard") {
 
     DemoCard {
         title = "Tabs"
+        demoSrcLink = "tabs/TabsDemo.kt"
+
         showcase = TabsDemo.create()
     }
 

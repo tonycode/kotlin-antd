@@ -10,6 +10,8 @@ val IconDemoCard = FC<Props>("IconDemoCard") {
 
     DemoCard {
         title = "Icon"
+        demoSrcLink = "icon/IconDemo.kt"
+
         showcase = IconDemo.create()
     }
 

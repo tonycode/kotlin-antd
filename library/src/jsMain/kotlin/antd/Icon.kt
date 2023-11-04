@@ -16,6 +16,7 @@ import web.cssom.Color
 //
 
 // outlined
+@JsName("CloseOutlined") external val CloseOutlined: ComponentClass<IconProps>
 @JsName("HomeOutlined") external val HomeOutlined: ComponentClass<IconProps>
 @JsName("LoadingOutlined") external val LoadingOutlined: ComponentClass<IconProps>
 @JsName("StarOutlined") external val StarOutlined: ComponentClass<IconProps>

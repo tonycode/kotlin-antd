@@ -7,6 +7,7 @@ import antd.TabItemType
 import antd.Tabs
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.alert.AlertDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.button.ButtonDemoCard
+import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.dropdown.DropdownDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.icon.IconDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.radio.RadioDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.spin.SpinDemoCard
@@ -61,6 +62,10 @@ enum class Section(val title: String, val createContentFunc: () -> ReactNode) {
         IconDemoCard()
         TypographyTitleDemoCard()
         TypographyTextDemoCard()
+    } }),
+
+    NAVIGATION("Navigation", { Fragment.create {
+        DropdownDemoCard()
     } }),
 
     DATA_ENTRY("Data Entry", { Fragment.create {

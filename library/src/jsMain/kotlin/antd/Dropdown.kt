@@ -6,6 +6,7 @@ package antd
 import react.CSSProperties
 import react.ComponentClass
 import react.PropsWithChildren
+import react.PropsWithClassName
 import react.ReactNode
 
 
@@ -15,7 +16,7 @@ import react.ReactNode
 @JsName("Dropdown")
 external val Dropdown: ComponentClass<DropdownProps>
 
-external interface DropdownProps : PropsWithChildren {
+external interface DropdownProps : PropsWithClassName, PropsWithChildren {
 
     /**
      * Whether the dropdown arrow should be visible

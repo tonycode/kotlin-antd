@@ -5,9 +5,9 @@ Kotlin wrapper for **Ant Design** (React UI library `antd`, https://ant.design/d
 
 based on **antd** version: [5.10.3](https://github.com/ant-design/ant-design/releases/tag/5.10.3)
 
-<hr />
+## LIVE DEMO
 
-**LIVE DEMO**: https://tonycode.dev/demos/kotlin-antd-demo/
+https://tonycode.dev/demos/kotlin-antd-demo/
 
 (this is a deployed `demo` module from this repository)
 
@@ -49,6 +49,10 @@ Space {
     Typography.Text {
         code = true
         +"Ant Design (code)"
+    }
+
+    Alert {
+        setMessage("some info")
     }
 
     Button {
@@ -95,38 +99,32 @@ Space {
 
         onChange = { console.log(it) }
     }
+
+    Spin()
 }
 ```
 
 see usage examples here:
 
+- [Alert](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_antd_demo/ui/screens/alert/AlertDemo.kt)
 - [Button](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_antd_demo/ui/screens/button/ButtonDemo.kt)
+- [Dropdown](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_antd_demo/ui/screens/dropdown/DropdownDemo.kt)
+- [Icon](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_antd_demo/ui/screens/icon/IconDemo.kt)
 - [Radio](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_antd_demo/ui/screens/radio/RadioDemo.kt)
+- [Select](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_antd_demo/ui/screens/select/SelectDemo.kt)
+- [Spin](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_antd_demo/ui/screens/spin/SpinDemo.kt)
+- [Switch](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_antd_demo/ui/screens/switch/SwitchDemo.kt)
+- [Table](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_antd_demo/ui/screens/table/TableDemo.kt)
+- [Tabs](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_antd_demo/ui/screens/tabs/TabsDemo.kt)
 - [Typography.Title](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_antd_demo/ui/screens/typography/TypographyTitleDemo.kt)
 - [Typography.Text](demo/src/jsMain/kotlin/dev/tonycode/kotlin_wrappers/kotlin_antd_demo/ui/screens/typography/TypographyTextDemo.kt)
 
 
 ## Wrappers implemented
 
-- General
-    - `Button` (90%)
-    - `Icon` (1%)
-    - `Typography.Title` (70%)
-    - `Typography.Text` (70%)
-- Layout
-    - `Space` (100%)
-- Data Entry
-    - `Checkbox` (95%)
-    - `Radio.Button` (95%)
-    - `Radio.Group` (95%)
-    - `Select` (10%)
-    - `Switch` (50%)
-- Data Display
-    - `Tabs` (10%)
-- Feedback
-    - `Spin` (95%)
+see [live demo](https://github.com/tonycode/kotlin-antd#live-demo)
 
-Full list of `antd` js-library Components: https://ant.design/components/overview
+Full list of original `antd` js-library Components: https://ant.design/components/overview
 
 
 ## License

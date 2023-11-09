@@ -1,5 +1,17 @@
 package antd
 
+import react.ReactNode
+
+
+//region SelectProps.allowClear setters
+fun SelectProps.setAllowClear(value: Boolean) {
+    this.allowClear = value
+}
+
+fun SelectProps.setAllowClear(value: ClearIcon) {
+    this.allowClear = value
+}
+//endregion
 
 //region SelectProps.defaultValue setters
 fun SelectProps.setDefaultValue(value: String) {
@@ -34,5 +46,15 @@ fun LabeledValue.setValue(value: String) {
 
 fun LabeledValue.setValue(value: Number) {
     this.value = value
+}
+//endregion
+
+//region SelectProps.placeholder setters
+fun SelectProps.setPlaceholder(value: String) {
+    this.placeholder = value
+}
+
+fun SelectProps.setPlaceholder(value: ReactNode) {
+    this.placeholder = value
 }
 //endregion

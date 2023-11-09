@@ -19,6 +19,15 @@ external val Select: ComponentClass<SelectProps>
 external interface SelectProps : PropsWithClassName {
 
     /**
+     * Customize clear icon
+     *
+     * see: [SelectProps.setAllowClear]
+     *
+     * default: false
+     */
+    var allowClear: dynamic  // boolean | { clearIcon?: ReactNode }
+
+    /**
      * Initial selected option
      *
      * see: [SelectProps.setDefaultValue]
@@ -26,9 +35,47 @@ external interface SelectProps : PropsWithClassName {
     var defaultValue: dynamic  // string | string[] | number | number[] | LabeledValue | LabeledValue[]
 
     /**
+     * Whether disabled select
+     *
+     * default: false
+     */
+    var disabled: Boolean
+
+    /**
+     * Indicate loading state
+     *
+     * default: false
+     */
+    var loading: Boolean
+
+    /**
+     * Which prop value of option will be used for filter if filterOption is true
+     *
+     * If [options] is set, it should be set to [OptionFilterProp.label]
+     *
+     * default: [OptionFilterProp.value]
+     */
+    var optionFilterProp: OptionFilterProp
+
+    /**
      * Select options. Will get better perf than jsx definition
      */
     var options: Array<Option>
+
+    /**
+     * Placeholder of select
+     *
+     * see: [SelectProps.setPlaceholder]
+     */
+    var placeholder: dynamic  // string | ReactNode
+
+    /**
+     * Whether select is searchable
+     *
+     * default(single): false
+     * default(multiple): true
+     */
+    var showSearch: Boolean
 
     var onChange: ((value: String) -> Unit)
 

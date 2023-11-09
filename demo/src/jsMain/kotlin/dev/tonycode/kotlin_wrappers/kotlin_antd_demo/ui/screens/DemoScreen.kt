@@ -11,6 +11,7 @@ import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.dropdown.Dropdow
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.icon.IconDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.radio.RadioDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.spin.SpinDemoCard
+import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.switch.SwitchDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.table.TableDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.tabs.TabsDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.typography.TypographyTextDemoCard
@@ -70,6 +71,7 @@ enum class Section(val title: String, val createContentFunc: () -> ReactNode) {
 
     DATA_ENTRY("Data Entry", { Fragment.create {
         RadioDemoCard()
+        SwitchDemoCard()
     } }),
 
     DATA_DISPLAY("Data Display", { Fragment.create {

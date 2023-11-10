@@ -36,7 +36,7 @@ val AlertDemoControls = FC<AlertDemoControlsProps>("AlertDemoControls") { props 
         direction = Direction.vertical
 
         DemoParam {
-            name = "alertType"
+            name = "type"
 
             changer = Radio.Group.create {
                 setOptions(listOf(

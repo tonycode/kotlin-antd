@@ -9,6 +9,7 @@ import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.alert.AlertDemoC
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.button.ButtonDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.dropdown.DropdownDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.icon.IconDemoCard
+import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.input.InputDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.radio.RadioDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.select.SelectDemoCard
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.spin.SpinDemoCard
@@ -71,6 +72,7 @@ enum class Section(val title: String, val createContentFunc: () -> ReactNode) {
     } }),
 
     DATA_ENTRY("Data Entry", { Fragment.create {
+        InputDemoCard()
         RadioDemoCard()
         SelectDemoCard()
         SwitchDemoCard()

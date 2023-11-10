@@ -3,6 +3,7 @@ package dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.alert
 import antd.AlertType
 import antd.AlertTypeFactory
 import antd.Direction
+import antd.Input
 import antd.Radio
 import antd.RadioOptionType
 import antd.Space
@@ -11,7 +12,6 @@ import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoBooleanPa
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoParam
 import react.FC
 import react.create
-import react.dom.html.ReactHTML.input
 
 
 external interface AlertDemoControlsProps : AlertDemoProps {
@@ -58,7 +58,7 @@ val AlertDemoControls = FC<AlertDemoControlsProps>("AlertDemoControls") { props 
         DemoParam {
             name = "message"
 
-            changer = input.create {
+            changer = Input.create {
                 value = props.message
                 onChange = { props.onMessageChanged(it.target.value) }
             }
@@ -67,8 +67,8 @@ val AlertDemoControls = FC<AlertDemoControlsProps>("AlertDemoControls") { props 
         DemoParam {
             name = "description"
 
-            changer = input.create {
-                value = props.description
+            changer = Input.create {
+                value = props.description.orEmpty()
                 onChange = { props.onDescriptionChanged(it.target.value) }
             }
         }

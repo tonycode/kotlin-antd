@@ -4,13 +4,14 @@ import antd.Direction
 import antd.Option
 import antd.OptionFilterProp
 import antd.Select
-import antd.Size
 import antd.Space
 import antd.Typography
 import antd.setDefaultValue
 import antd.setPlaceholder
+import emotion.react.css
 import react.FC
 import react.Props
+import web.cssom.px
 
 
 val SelectDemo = FC<Props>("SelectDemo") {
@@ -24,11 +25,10 @@ val SelectDemo = FC<Props>("SelectDemo") {
 
     Space {
         direction = Direction.vertical
-        size = Size.large
 
         Typography.Title {
             level = 5
-            +"basic usage"
+            +"Basic usage"
         }
 
         Space {
@@ -64,8 +64,9 @@ val SelectDemo = FC<Props>("SelectDemo") {
         }
 
         Typography.Title {
+            css { marginTop = 16.px }
             level = 5
-            +"select with search field"
+            +"Select with search field"
         }
 
         Select {

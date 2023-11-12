@@ -20,7 +20,9 @@ val AlertDemoCard = FC<Props>("AlertDemoCard") {
 
     var showIcon: Boolean by useState(false)
 
-    var closeIcon: Boolean by useState(false)
+    var action: AlertAction by useState(AlertAction.NONE)
+
+    var closeIcon: CloseIcon by useState(CloseIcon.Default)
 
 
     DemoCard {
@@ -33,6 +35,7 @@ val AlertDemoCard = FC<Props>("AlertDemoCard") {
             this.description = description
             this.banner = banner
             this.showIcon = showIcon
+            this.action = action
             this.closeIcon = closeIcon
         }
 
@@ -42,6 +45,7 @@ val AlertDemoCard = FC<Props>("AlertDemoCard") {
             this.description = description
             this.banner = banner
             this.showIcon = showIcon
+            this.action = action
             this.closeIcon = closeIcon
 
             onAlertTypeChanged = { alertType = it }
@@ -49,6 +53,7 @@ val AlertDemoCard = FC<Props>("AlertDemoCard") {
             onDescriptionChanged = { description = it }
             onBannerChanged = { banner = it }
             onShowIconChanged = { showIcon = it }
+            onActionChanged = { action = it }
             onCloseIconChanged = { closeIcon = it }
         }
     }

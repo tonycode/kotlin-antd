@@ -8,6 +8,7 @@ import antd.RadioOptionType
 import antd.Size
 import antd.Space
 import antd.setOptions
+import antd.setValue
 import react.FC
 import react.Props
 import react.useState
@@ -43,7 +44,7 @@ val RadioDemo = FC<RadioDemoProps>("RadioDemo") { props ->
 
         Radio.Group {
             setOptions("Apple", "Pear", "Orange")
-            value = selectedValue
+            setValue(selectedValue)
 
             size = props.size
             disabled = props.disabled
@@ -53,7 +54,7 @@ val RadioDemo = FC<RadioDemoProps>("RadioDemo") { props ->
 
         Radio.Group {
             setOptions(optionsWithDisabled)
-            value = selectedValue
+            setValue(selectedValue)
 
             size = props.size
             disabled = props.disabled
@@ -63,7 +64,7 @@ val RadioDemo = FC<RadioDemoProps>("RadioDemo") { props ->
 
         Radio.Group {
             setOptions(options)
-            value = selectedValue
+            setValue(selectedValue)
 
             optionType = RadioOptionType.button
             size = props.size
@@ -74,7 +75,7 @@ val RadioDemo = FC<RadioDemoProps>("RadioDemo") { props ->
 
         Radio.Group {
             setOptions(optionsWithDisabled)
-            value = selectedValue
+            setValue(selectedValue)
 
             optionType = RadioOptionType.button
             buttonStyle = RadioButtonStyle.solid

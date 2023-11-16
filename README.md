@@ -69,7 +69,7 @@ Space {
 
     Radio.Group {
         setOptions("Apple", "Pear", "Orange")
-        value = "Apple"
+        setValue("Apple")
 
         disabled = false
         optionType = RadioOptionType.button

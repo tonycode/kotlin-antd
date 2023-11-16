@@ -1,6 +1,12 @@
 package antd
 
 
+//region RadioGroupProps.defaultValue setters
+fun RadioGroupProps.setDefaultValue(value: String) {
+    this.defaultValue = value
+}
+//endregion
+
 //region RadioGroupProps.options setters
 fun RadioGroupProps.setOptions(options: List<String>) {
     this.options = options.toTypedArray()

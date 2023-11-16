@@ -7,6 +7,8 @@ import antd.RadioOptionType
 import antd.Space
 import antd.SwitchSize
 import antd.SwitchSizeFactory
+import antd.setOptions
+import antd.setValue
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoBooleanParam
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoParam
 import react.FC
@@ -43,11 +45,11 @@ val SwitchDemoControls = FC<SwitchDemoControlsProps>("SwitchDemoControls") { pro
         DemoParam {
             name = "size"
             changer = Radio.Group.create {
-                options = arrayOf(
-                    Option(SwitchSize.default.toString()),
-                    Option(SwitchSize.small.toString()),
+                setOptions(
+                    SwitchSize.default.toString(),
+                    SwitchSize.small.toString(),
                 )
-                defaultValue = props.size.toString()
+                setValue(props.size.toString())
 
                 optionType = RadioOptionType.button
 

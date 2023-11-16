@@ -79,6 +79,8 @@ external interface RadioGroupProps : PropsWithClassName {
 
     /**
      * Default selected value
+     *
+     * use: [RadioGroupProps.setDefaultValue]
      */
     var defaultValue: dynamic
 
@@ -97,7 +99,7 @@ external interface RadioGroupProps : PropsWithClassName {
     /**
      * Set children optional
      *
-     * see: Radio-ext.kt
+     * use: [RadioGroupProps.setOptions]
      */
     var options: dynamic  // string[] | number[] | Array<{ label: ReactNode; value: string; disabled?: boolean; }>
 
@@ -117,6 +119,8 @@ external interface RadioGroupProps : PropsWithClassName {
 
     /**
      * Used for setting the currently selected value
+     *
+     * use: [RadioGroupProps.setValue]
      */
     var value: dynamic
 

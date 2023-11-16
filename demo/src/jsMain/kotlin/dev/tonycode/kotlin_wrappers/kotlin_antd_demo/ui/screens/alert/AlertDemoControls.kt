@@ -11,6 +11,7 @@ import antd.Radio
 import antd.RadioOptionType
 import antd.Space
 import antd.setOptions
+import antd.setValue
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoBooleanParam
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoParam
 import react.FC
@@ -45,13 +46,13 @@ val AlertDemoControls = FC<AlertDemoControlsProps>("AlertDemoControls") { props 
             name = "type"
 
             changer = Radio.Group.create {
-                setOptions(listOf(
+                setOptions(
                     AlertType.success.toString(),
                     AlertType.info.toString(),
                     AlertType.warning.toString(),
                     AlertType.error.toString(),
-                ))
-                value = props.alertType
+                )
+                setValue(props.alertType.toString())
 
                 optionType = RadioOptionType.button
 
@@ -96,7 +97,7 @@ val AlertDemoControls = FC<AlertDemoControlsProps>("AlertDemoControls") { props 
 
             changer = Radio.Group.create {
                 setOptions(AlertAction.entries.map { Option(it.name) })
-                value = props.action.name
+                setValue(props.action.name)
 
                 optionType = RadioOptionType.button
 
@@ -112,13 +113,13 @@ val AlertDemoControls = FC<AlertDemoControlsProps>("AlertDemoControls") { props 
             name = "closeIcon"
 
             changer = Radio.Group.create {
-                setOptions(listOf(
-                    Option(CloseIcon.Disabled.label),
-                    Option(CloseIcon.Default.label),
-                    Option(CUSTOM_CLOSE_ICON_CIRCLE),
-                    Option(CUSTOM_CLOSE_ICON_SQUARE),
-                ))
-                value = props.closeIcon.label
+                setOptions(
+                    CloseIcon.Disabled.label,
+                    CloseIcon.Default.label,
+                    CUSTOM_CLOSE_ICON_CIRCLE,
+                    CUSTOM_CLOSE_ICON_SQUARE,
+                )
+                setValue(props.closeIcon.label)
 
                 optionType = RadioOptionType.button
 

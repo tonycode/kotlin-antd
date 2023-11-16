@@ -7,6 +7,7 @@ import antd.Space
 import antd.SpinSize
 import antd.SpinSizeFactory
 import antd.setOptions
+import antd.setValue
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoBooleanParam
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoParam
 import react.FC
@@ -33,13 +34,11 @@ val SpinDemoControls = FC<SpinDemoControlsProps>("SpinDemoControls") { props ->
 
             changer = Radio.Group.create {
                 setOptions(
-                    listOf(
-                        SpinSize.small.toString(),
-                        SpinSize.default.toString(),
-                        SpinSize.large.toString(),
-                    )
+                    SpinSize.small.toString(),
+                    SpinSize.default.toString(),
+                    SpinSize.large.toString(),
                 )
-                value = props.size
+                setValue(props.size.toString())
 
                 optionType = RadioOptionType.button
 
@@ -60,7 +59,7 @@ val SpinDemoControls = FC<SpinDemoControlsProps>("SpinDemoControls") { props ->
 
             changer = Radio.Group.create {
                 setOptions(CustomIndicator.entries.toList().map { it.title })
-                value = props.customIndicator.title
+                setValue(props.customIndicator.title)
 
                 optionType = RadioOptionType.button
 

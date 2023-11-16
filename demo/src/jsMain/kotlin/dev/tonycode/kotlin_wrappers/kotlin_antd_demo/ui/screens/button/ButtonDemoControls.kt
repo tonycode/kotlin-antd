@@ -3,13 +3,13 @@ package dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.button
 import antd.ButtonShape
 import antd.ButtonShapeFactory
 import antd.Direction
-import antd.Option
 import antd.Radio
 import antd.RadioOptionType
 import antd.Size
 import antd.SizeFactory
 import antd.Space
 import antd.setOptions
+import antd.setValue
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoBooleanParam
 import dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.components.DemoParam
 import react.FC
@@ -65,12 +65,12 @@ val ButtonDemoControls = FC<ButtonDemoControlsProps>("ButtonDemoControls") { pro
             name = "shape"
 
             changer = Radio.Group.create {
-                setOptions(listOf(
-                    Option(ButtonShape.default.toString()),
-                    Option(ButtonShape.circle.toString()),
-                    Option(ButtonShape.round.toString()),
-                ))
-                value = props.buttonsShape.toString()
+                setOptions(
+                    ButtonShape.default.toString(),
+                    ButtonShape.circle.toString(),
+                    ButtonShape.round.toString(),
+                )
+                setValue(props.buttonsShape.toString())
 
                 optionType = RadioOptionType.button
 
@@ -84,12 +84,12 @@ val ButtonDemoControls = FC<ButtonDemoControlsProps>("ButtonDemoControls") { pro
             name = "size"
 
             changer = Radio.Group.create {
-                options = arrayOf(
-                    Option(Size.small.toString()),
-                    Option(Size.middle.toString()),
-                    Option(Size.large.toString()),
+                setOptions(
+                    Size.small.toString(),
+                    Size.middle.toString(),
+                    Size.large.toString(),
                 )
-                value = props.buttonsSize.toString()
+                setValue(props.buttonsSize.toString())
 
                 optionType = RadioOptionType.button
 

@@ -29,6 +29,7 @@ val MessageDemo = FC<MessageDemoProps>("MessageDemo") { props ->
 
 
     createContext("Default").Provider {
+        value = ""  // suppress console warning
         +contextHolder
 
         Button {

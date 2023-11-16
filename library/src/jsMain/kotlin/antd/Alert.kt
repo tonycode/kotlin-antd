@@ -41,7 +41,7 @@ external interface AlertProps : PropsWithClassName {
      *
      * - close button will be hidden when setting to null or false
      *
-     * see: [AlertProps.setCloseIcon]
+     * use: [AlertProps.setCloseIcon]
      *
      * default: false && [CloseOutlined]
      */
@@ -50,7 +50,7 @@ external interface AlertProps : PropsWithClassName {
     /**
      * Additional content of Alert
      *
-     * see: [AlertProps.setDescription]
+     * use: [AlertProps.setDescription]
      */
     var description: dynamic  // string | ReactNode
 
@@ -62,7 +62,7 @@ external interface AlertProps : PropsWithClassName {
     /**
      * Content of Alert
      *
-     * see: [AlertProps.setMessage]
+     * use: [AlertProps.setMessage]
      */
     var message: dynamic  // string | ReactNode
 

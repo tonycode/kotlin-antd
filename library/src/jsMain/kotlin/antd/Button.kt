@@ -75,7 +75,7 @@ external interface ButtonProps : PropsWithClassName, PropsWithChildren {
     /**
      * Set the loading status of button
      *
-     * use [ButtonProps.setLoading]
+     * use: [ButtonProps.setLoading]
      *
      * default: false
      */

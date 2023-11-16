@@ -21,7 +21,7 @@ external interface SelectProps : PropsWithClassName {
     /**
      * Customize clear icon
      *
-     * see: [SelectProps.setAllowClear]
+     * use: [SelectProps.setAllowClear]
      *
      * default: false
      */
@@ -30,7 +30,7 @@ external interface SelectProps : PropsWithClassName {
     /**
      * Initial selected option
      *
-     * see: [SelectProps.setDefaultValue]
+     * use: [SelectProps.setDefaultValue]
      */
     var defaultValue: dynamic  // string | string[] | number | number[] | LabeledValue | LabeledValue[]
 
@@ -65,7 +65,7 @@ external interface SelectProps : PropsWithClassName {
     /**
      * Placeholder of select
      *
-     * see: [SelectProps.setPlaceholder]
+     * use: [SelectProps.setPlaceholder]
      */
     var placeholder: dynamic  // string | ReactNode
 

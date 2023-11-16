@@ -34,7 +34,7 @@ external interface SpaceProps : PropsWithClassName, PropsWithChildren {
     /**
      * The space size
      *
-     * use [SpaceProps.setSize]
+     * use: [SpaceProps.setSize]
      *
      * default: [Size.small]
      */

@@ -22,21 +22,21 @@ external interface InputProps : PropsWithClassName {
     /**
      * The label text displayed after (on the right side of) the input field
      *
-     * see: [InputProps.setAddonAfter]
+     * use: [InputProps.setAddonAfter]
      */
     var addonAfter: dynamic  // string | ReactNode
 
     /**
      * The label text displayed before (on the left side of) the input field
      *
-     * see: [InputProps.setAddonBefore]
+     * use: [InputProps.setAddonBefore]
      */
     var addonBefore: dynamic  // string | ReactNode
 
     /**
      * If allow to remove input content with clear icon
      *
-     * see: [InputProps.setAllowClear]
+     * use: [InputProps.setAllowClear]
      *
      * default: false
      */
@@ -76,7 +76,7 @@ external interface InputProps : PropsWithClassName {
     /**
      * The prefix icon for the Input
      *
-     * see: [InputProps.setPrefix]
+     * use: [InputProps.setPrefix]
      */
     var prefix: dynamic  // string | ReactNode
 
@@ -101,7 +101,7 @@ external interface InputProps : PropsWithClassName {
     /**
      * The suffix icon for the Input
      *
-     * see: [InputProps.setSuffix]
+     * use: [InputProps.setSuffix]
      */
     var suffix: dynamic  // string | ReactNode
 

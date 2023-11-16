@@ -18,3 +18,9 @@ fun RadioGroupProps.setOptions(options: List<Option>) {
     this.options = options.toTypedArray()
 }
 //endregion
+
+//region RadioGroupProps.value setters
+fun RadioGroupProps.setValue(value: String) {
+    this.value = value
+}
+//endregion

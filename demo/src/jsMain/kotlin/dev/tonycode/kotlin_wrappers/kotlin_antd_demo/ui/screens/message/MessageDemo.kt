@@ -2,14 +2,22 @@ package dev.tonycode.kotlin_wrappers.kotlin_antd_demo.ui.screens.message
 
 import antd.Button
 import antd.MessageApi
+import antd.MessageType
 import antd.message
+import antd.open
 import react.FC
 import react.Props
 import react.ReactElement
 import react.createContext
 
 
-val MessageDemo = FC<Props>("MessageDemo") {
+external interface MessageDemoProps : Props {
+
+    var messageType: MessageType
+
+}
+
+val MessageDemo = FC<MessageDemoProps>("MessageDemo") { props ->
 
     val useMessage = message.useMessage()
 
@@ -27,7 +35,7 @@ val MessageDemo = FC<Props>("MessageDemo") {
             +"show message"
 
             onClick = {
-                messageApi.info("Some info")
+                messageApi.open(props.messageType, "Some content")
             }
         }
     }
